@@ -372,7 +372,7 @@ function tohsl($r=0, $g=0, $b=0, $a=false) {
 		$a = round($a, 3);
 		return "hsl($h, $s%, $l%, $a)";
 	}
-	return "hsl($h, $s%, $l%)";;
+	return "hsl($h, $s%, $l%)";
 }
 function toname($hex='') {
 	global $names;
