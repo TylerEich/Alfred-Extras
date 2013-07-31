@@ -1,5 +1,5 @@
 {
-	"version": 1.3,
+	"version": 1.21,
 	"download_url": "https://raw.github.com/TylerEich/Alfred-Extras/master/Workflows/Colors.alfredworkflow",
 	"description": "Alleyoop support, Reveal in Color Picker function, better error handling"
 }
