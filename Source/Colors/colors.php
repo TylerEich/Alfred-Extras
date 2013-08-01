@@ -46,11 +46,17 @@ switch($mode){
 	$input = preg_replace('/[^a-zA-Z]/', '', $q);
 	if($input){
 		$rgba = name($input);
-	}else{
+	} else {
 		noresult($mode);
 		echo $w->toxml();
 		return;
 	}
+	break;
+	
+	case 'alpha':
+	$alpha = explode('|', $q);
+	echo format($alpha[0], jsonrgba($alpha[1]), true);
+	return;
 	break;
 	
 	case 'pick':
@@ -92,30 +98,30 @@ $b = $rgba[2];
 $a = $rgba[3];
 $hexraw = tohexraw($r,$g,$b,$a);
 
-if(!($w->read($w->cache()."/$hexraw.png"))){
-	$files = glob($w->cache().'/*'); // get all file names
-	foreach($files as $file){ // iterate files
-		if(is_file($file))
-			unlink($file); // delete file
-	}
-	$img_rgba = array(
-		round($r * 255),
-		round($g * 255),
-		round($b * 255),
-		round((1 - $a) * 127)
-	);
-	$img = imagecreatefrompng('checker.png');
-	$color = imagecolorallocatealpha(
-		$img,
-		$img_rgba[0],
-		$img_rgba[1],
-		$img_rgba[2],
-		$img_rgba[3]
-	);
-	imagefilledrectangle($img, 8, 8, 120, 120, $color);
-	imagepng($img, $w->cache()."/$hexraw.png");
-	imagedestroy($img);
-}
+// if(!($w->read($w->cache()."/$hexraw.png"))){
+// 	$files = glob($w->cache().'/*'); // get all file names
+// 	foreach($files as $file){ // iterate files
+// 		if(is_file($file))
+// 			unlink($file); // delete file
+// 	}
+// 	$img_rgba = array(
+// 		round($r * 255),
+// 		round($g * 255),
+// 		round($b * 255),
+// 		round((1 - $a) * 127)
+// 	);
+// 	$img = imagecreatefrompng('checker.png');
+// 	$color = imagecolorallocatealpha(
+// 		$img,
+// 		$img_rgba[0],
+// 		$img_rgba[1],
+// 		$img_rgba[2],
+// 		$img_rgba[3]
+// 	);
+// 	imagefilledrectangle($img, 8, 8, 120, 120, $color);
+// 	imagepng($img, $w->cache()."/$hexraw.png");
+// 	imagedestroy($img);
+// }
 
 if($a == 1){
 	$a = false;
@@ -126,7 +132,6 @@ $hsl = tohsl($r,$g,$b,$a);
 $name = toname(tohexraw($r,$g,$b));
 $rgb = torgb($r,$g,$b,$a);
 $rgb_pcnt = torgb_pcnt($r,$g,$b,$a);
-$uicolor = touicolor($r,$g,$b,$a);
 $modes = array(
 	'hex'=>$hex,
 	'hsl'=>$hsl,
@@ -402,16 +407,6 @@ function torgb_pcnt($r=0, $g=0, $b=0, $a=false) {
 	}
 	return "rgb($r%, $g%, $b%)";
 }
-function touicolor($r=0, $g=0, $b=0, $a=false) {
-	$r = round($r,3);
-	$g = round($g,3);
-	$b = round($b,3);
-	if($a !== false){
-		$a = round($a, 3);
-		return "[UIColor colorWithRed:$r green:$g blue:$b alpha:$a]";
-	}
-	return "[UIColor colorWithRed:$r green:$g blue:$b alpha:1.0]";
-}
 
 
 // Convert JSON to assoc array and vice versa
@@ -454,11 +449,30 @@ function colorpicker($rgba=null) {
 	}
 	return $rgba;
 }
-function format($mode='rgb', $rgba) {
+function format($mode='rgb', $rgba, $alpha=false) {
 	if (!$rgba) return false;
 	$r = $rgba['r'];
 	$g = $rgba['g'];
 	$b = $rgba['b'];
+	$a = $rgba['a'];
+	if ($alpha) {
+		switch ($mode) {
+			case 'hex':
+			return tohex($r,$g,$b,$a);
+		
+			case 'hsl':
+			return tohsl($r,$g,$b,$a);
+		
+			case 'rgb':
+			return torgb($r,$g,$b,$a);
+		
+			case 'rgb_pcnt':
+			return torgb_pcnt($r,$g,$b,$a);
+		
+			case 'name':
+			return torgb($r,$g,$b,$a);
+		}
+	}
 	switch ($mode) {
 		case 'hex':
 		return tohex($r,$g,$b);
@@ -474,9 +488,6 @@ function format($mode='rgb', $rgba) {
 		
 		case 'name':
 		return torgb($r,$g,$b);
-
-		case 'uicolor':
-		return touicolor($r,$g,$b);
 	}
 }
 function noresult($mode='rgb', $title='Color Picker') {
