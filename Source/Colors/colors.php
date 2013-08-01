@@ -55,7 +55,13 @@ switch($mode){
 	
 	case 'alpha':
 	$alpha = explode('|', $q);
-	echo format($alpha[0], jsonrgba($alpha[1]), true);
+	if ($alpha[0] == 'pick') { // if called on Choose Color result
+		$color = jsonrgba(colorpicker());
+		$color = format($alpha[1], jsonrgba($color));
+		if ($color) search($color);
+	} else {
+		echo format($alpha[0], jsonrgba($alpha[1]), true);
+	}
 	return;
 	break;
 	
@@ -86,6 +92,15 @@ switch($mode){
 	if ($color) search(format($reveal[0], jsonrgba($color)));
 	return;
 	break;
+	
+	case 'clear':
+	$files = glob($w->cache().'/*'); // get all file names
+	foreach ($files as $file){ // iterate files
+		if (is_file($file))
+			unlink($file); // delete file
+	}
+	return;
+	break;
 }
 if($rgba == false){
 	noresult($mode, 'No Color Matches');
@@ -98,30 +113,25 @@ $b = $rgba[2];
 $a = $rgba[3];
 $hexraw = tohexraw($r,$g,$b,$a);
 
-// if(!($w->read($w->cache()."/$hexraw.png"))){
-// 	$files = glob($w->cache().'/*'); // get all file names
-// 	foreach($files as $file){ // iterate files
-// 		if(is_file($file))
-// 			unlink($file); // delete file
-// 	}
-// 	$img_rgba = array(
-// 		round($r * 255),
-// 		round($g * 255),
-// 		round($b * 255),
-// 		round((1 - $a) * 127)
-// 	);
-// 	$img = imagecreatefrompng('checker.png');
-// 	$color = imagecolorallocatealpha(
-// 		$img,
-// 		$img_rgba[0],
-// 		$img_rgba[1],
-// 		$img_rgba[2],
-// 		$img_rgba[3]
-// 	);
-// 	imagefilledrectangle($img, 8, 8, 120, 120, $color);
-// 	imagepng($img, $w->cache()."/$hexraw.png");
-// 	imagedestroy($img);
-// }
+if (!file_exists($w->cache()."/$hexraw.png")) { // If the necessary preview is not already cached...
+	$img_rgba = array(
+		round($r * 255),
+		round($g * 255),
+		round($b * 255),
+		round((1 - $a) * 127) // Alpha likes its values inverted (0 = opaque, 1 = transparent) and taken from 127
+	);
+	$img = imagecreatefrompng('checker.png');
+	$color = imagecolorallocatealpha(
+		$img,
+		$img_rgba[0],
+		$img_rgba[1],
+		$img_rgba[2],
+		$img_rgba[3]
+	);
+	imagefilledrectangle($img, 8, 8, 120, 120, $color);
+	imagepng($img, $w->cache()."/$hexraw.png");
+	imagedestroy($img); // clear memory used to make image
+}
 
 if($a == 1){
 	$a = false;
