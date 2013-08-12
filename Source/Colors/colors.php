@@ -72,7 +72,7 @@ switch($mode){
 		$color = format($pick[1], jsonrgba($color));
 		if ($color) search($color);
 	} else {
-		echo format($pick[0], jsonrgba($pick[1]));
+		echo format($pick[0], jsonrgba($pick[1]), false, true);
 	}
 	return;
 	break;
@@ -388,7 +388,7 @@ function tohsl($r=0, $g=0, $b=0, $a=false) {
 }
 function toname($hex='') {
 	global $names;
-	if($names[$hex]){
+	if(array_key_exists($hex, $names)){
 		return $names[$hex];
 	}else{
 		return false;
@@ -456,7 +456,7 @@ function colorpicker($rgba=null) {
 	}
 	return $rgba;
 }
-function format($mode='rgb', $rgba, $alpha=false) {
+function format($mode='rgb', $rgba, $alpha=false, $name=false) {
 	if (!$rgba) return false;
 	$r = $rgba['r'];
 	$g = $rgba['g'];
@@ -494,6 +494,10 @@ function format($mode='rgb', $rgba, $alpha=false) {
 		return torgb_pcnt($r,$g,$b);
 		
 		case 'name':
+		if ($name) {
+			$colorName = toname(tohexraw($r,$g,$b));
+			if ($colorName !== false) return $colorName;
+		}
 		return torgb($r,$g,$b);
 	}
 }
