@@ -148,7 +148,6 @@ $modes = array(
 	'name'=>$name,
 	'rgb'=>$rgb,
 	'rgb_pcnt'=>$rgb_pcnt,
-	'uicolor'=>$uicolor
 );
 if(!$a){
 	$description = array(
@@ -157,7 +156,6 @@ if(!$a){
 		'name'=>'CSS3 named color',
 		'rgb'=>'RGB format',
 		'rgb_pcnt'=>'RGB percent format',
-		'uicolor'=>'UIColor format'
 	);
 }else{
 	$description = array(
@@ -166,7 +164,6 @@ if(!$a){
 		'name'=>'CSS3 named color',
 		'rgb'=>'RGBA format',
 		'rgb_pcnt'=>'RGBA percent format',
-		'uicolor'=>'UIColor format'
 	);
 }
 $json = jsonrgba($rgba);
