@@ -24,10 +24,10 @@ switch($mode){
 	$input = preg_replace('/[^0-9.,-]/', '', $q);
 	$input = explode(',',$input);
 	$rgba = hsl(
-		$input[0],
-		$input[1],
-		$input[2],
-		$input[3]
+		array_key_exists(0, $input) ? $input[0] : null,
+		array_key_exists(1, $input) ? $input[1] : null,
+		array_key_exists(2, $input) ? $input[2] : null,
+		array_key_exists(3, $input) ? $input[3] : null
 	);
 	break;
 	
@@ -35,10 +35,10 @@ switch($mode){
 	$input = preg_replace('/[^0-9%.,-]/', '', $q);
 	$input = explode(',',$input);
 	$rgba = rgb(
-		$input[0],
-		$input[1],
-		$input[2],
-		$input[3]
+		array_key_exists(0, $input) ? $input[0] : null,
+		array_key_exists(1, $input) ? $input[1] : null,
+		array_key_exists(2, $input) ? $input[2] : null,
+		array_key_exists(3, $input) ? $input[3] : null
 	);
 	break;
 	

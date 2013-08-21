@@ -1,5 +1,5 @@
 {
-	"version": 1.4,
-	"download_url": "http://cl.ly/2k1j3X1N3l29",
-	"description": "Pressing ⌥ will include the alpha channel when copying"
+	"version": 1.41,
+	"download_url": "http://cl.ly/0f2G3K1h1A2g",
+	"description": "More robust color parsing, bug fix for color previews with 0 opacity; minor icon updates"
 }

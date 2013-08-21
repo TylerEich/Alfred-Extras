@@ -26,6 +26,14 @@
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D025EE64-0536-4B6A-A948-EA81F09B2ED9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
 		</array>
 		<key>2256D9F2-F0F1-4543-8893-622DDFA83A5E</key>
 		<array>
@@ -44,6 +52,14 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Reveal in Color Picker</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy with alpha channel</string>
 			</dict>
 		</array>
 		<key>6C80A2CD-4BBE-4E27-8BF5-FA913A95D604</key>
@@ -64,6 +80,14 @@
 				<key>modifiersubtext</key>
 				<string>Reveal in Color Picker</string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy with alpha channel</string>
+			</dict>
 		</array>
 		<key>A1AB2B83-C8EF-4022-97B8-E20B3D6CBDF8</key>
 		<array>
@@ -82,6 +106,41 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Reveal in Color Picker</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy with alpha channel</string>
+			</dict>
+		</array>
+		<key>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DCF950C0-BEB0-4CFD-A79B-BA403852D463</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>85D1E110-A191-4FF5-9CFD-BB3B884C576F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D025EE64-0536-4B6A-A948-EA81F09B2ED9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 			</dict>
 		</array>
 		<key>F2BEC6F7-52A4-43DA-83F9-438006D28B56</key>
@@ -102,16 +161,24 @@
 				<key>modifiersubtext</key>
 				<string>Reveal in Color Picker</string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy with alpha channel</string>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Tyler Eich</string>
 	<key>description</key>
-	<string>Convert CSS colors to various formats</string>
+	<string>Convert between CSS color formats</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Colors</string>
+	<string>Colors v1.41</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -140,6 +207,8 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>A1AB2B83-C8EF-4022-97B8-E20B3D6CBDF8</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -155,6 +224,23 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>1AE64A87-60D0-4230-B457-4609571FCA1F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>DCF950C0-BEB0-4CFD-A79B-BA403852D463</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -182,19 +268,33 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>F2BEC6F7-52A4-43DA-83F9-438006D28B56</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}' copied to clipboard</string>
+				<key>title</key>
+				<string>Colors</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>DCF950C0-BEB0-4CFD-A79B-BA403852D463</string>
+			<string>85D1E110-A191-4FF5-9CFD-BB3B884C576F</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -210,6 +310,8 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>16EE3B14-8B6C-45CD-BCC1-C12BFC9B814F</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -237,29 +339,42 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>6C80A2CD-4BBE-4E27-8BF5-FA913A95D604</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>output</key>
+				<key>escaping</key>
 				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>'{query}' copied to clipboard</string>
-				<key>title</key>
-				<string>Colors</string>
+				<key>script</key>
+				<string>php -f colors.php -- '{query}' 'clear'</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.script</string>
 			<key>uid</key>
-			<string>85D1E110-A191-4FF5-9CFD-BB3B884C576F</string>
+			<string>D025EE64-0536-4B6A-A948-EA81F09B2ED9</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>64</integer>
+				<key>script</key>
+				<string>php -f colors.php -- '{query}' 'alpha'</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -287,6 +402,8 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>2256D9F2-F0F1-4543-8893-622DDFA83A5E</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -298,12 +415,12 @@ HSL conversion formulas by Michael Jackson; port to PHP by Tyler Eich (http://mj
 		<key>16EE3B14-8B6C-45CD-BCC1-C12BFC9B814F</key>
 		<dict>
 			<key>ypos</key>
-			<real>250</real>
+			<real>190</real>
 		</dict>
 		<key>1AE64A87-60D0-4230-B457-4609571FCA1F</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>70</real>
 		</dict>
 		<key>2256D9F2-F0F1-4543-8893-622DDFA83A5E</key>
 		<dict>
@@ -318,17 +435,27 @@ HSL conversion formulas by Michael Jackson; port to PHP by Tyler Eich (http://mj
 		<key>85D1E110-A191-4FF5-9CFD-BB3B884C576F</key>
 		<dict>
 			<key>ypos</key>
-			<real>250</real>
+			<real>190</real>
 		</dict>
 		<key>A1AB2B83-C8EF-4022-97B8-E20B3D6CBDF8</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>D025EE64-0536-4B6A-A948-EA81F09B2ED9</key>
+		<dict>
+			<key>ypos</key>
+			<real>310</real>
+		</dict>
 		<key>DCF950C0-BEB0-4CFD-A79B-BA403852D463</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>70</real>
+		</dict>
+		<key>DF34F852-ABCE-4C35-9363-7AABFF9D24C4</key>
+		<dict>
+			<key>ypos</key>
+			<real>310</real>
 		</dict>
 		<key>F2BEC6F7-52A4-43DA-83F9-438006D28B56</key>
 		<dict>
