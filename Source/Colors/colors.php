@@ -557,39 +557,12 @@ function toUIColor_hsl($r=0, $g=0, $b=0, $a=false) {
 	if($a !== false){
 		$a = round($a, 3);
 		//[UIColor colorWithHue:0.589 saturation:0.373 brightness:0.294 alpha:1]
-		return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l alpha:$a]";
+//		return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l alpha:$a]";
 	}
-	return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l]";
-}
-
-
-function toNSColor_hsl($r=0, $g=0, $b=0, $a=false) {
-	$max = max($r,$g,$b);
-	$min = min($r,$g,$b);
-	$h = $s = $l = ($max + $min) / 2;
-	if($max == $min){
-		$h = $s = 0;
-	}else{
-		$d = $max - $min;
-		$s = $l > 0.5 ? $d / (2 - $max - $min) : $d / ($max + $min);
-		switch($max){
-			case $r: $h = ($g - $b) / $d + ($g < $b ? 6 : 0); break;
-			case $g: $h = ($b - $r) / $d + 2; break;
-			case $b: $h = ($r - $g) / $d + 4; break;
-		}
-		$h /= 6;
-	}
-	$h = round($h * 360);
-	$s = round($s * 100,1);
-	$l = round($l * 100,1);
-	
-	if($a !== false){
-		$a = round($a, 3);
-		//[UIColor colorWithHue:0.589 saturation:0.373 brightness:0.294 alpha:1]
-		return "[UIColor colorWithHue:$h saturation:$s brightness:$l alpha:$a]";
-	}
+	//return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l]";
 	return "[UIColor colorWithHue:$h saturation:$s brightness:$l]";
 }
+
 
 
 function toname($hex='') {
@@ -646,6 +619,36 @@ function toNSColor_rgb($r=0, $g=0, $b=0, $a=false) {
 		return "[NSColor colorWithCalibratedRed:$r green:$g blue:$b alpha:$a]";
 	}
 	return "[NSColor colorWithCalibratedRed:$r green:$g blue:$b alpha:1]";
+}
+
+function toNSColor_hsl($r=0, $g=0, $b=0, $a=false) {
+	$max = max($r,$g,$b);
+	$min = min($r,$g,$b);
+	$h = $s = $l = ($max + $min) / 2;
+	if($max == $min){
+		$h = $s = 0;
+	}else{
+		$d = $max - $min;
+		$s = $l > 0.5 ? $d / (2 - $max - $min) : $d / ($max + $min);
+		switch($max){
+			case $r: $h = ($g - $b) / $d + ($g < $b ? 6 : 0); break;
+			case $g: $h = ($b - $r) / $d + 2; break;
+			case $b: $h = ($r - $g) / $d + 4; break;
+		}
+		$h /= 6;
+	}
+	$h = round($h * 360);
+	$s = round($s * 100,1);
+	$l = round($l * 100,1);
+	
+	if($a !== false){
+		$a = round($a, 3);
+		//[UIColor colorWithHue:0.589 saturation:0.373 brightness:0.294 alpha:1]
+		//return "[UIColor colorWithHue:$h saturation:$s brightness:$l alpha:$a]";
+		return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l alpha:$a]";
+	}
+	//return "[UIColor colorWithHue:$h saturation:$s brightness:$l]";
+	return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l]";
 }
 
 // Convert JSON to assoc array and vice versa
