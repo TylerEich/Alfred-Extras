@@ -9,7 +9,7 @@ if($q == ''){
 	echo $w->toxml();
 	return;
 }
-$modes = array('hex','hsl','name','rgb','rgb_pcnt','UIColor_rgb','UIColor_hsl','NSColor_rgb','NSColor_hsl');
+$modes = array('hex','hsl','name','rgb','rgb_pcnt','UIColor_rgb','UIColor_hsb','NSColor_rgb','NSColor_hsb');
 $rgba;
 $names = array(
 	'f0f8ff'=>'aliceblue','faebd7'=>'antiquewhite','00ffff'=>'aqua','7fffd4'=>'aquamarine','f0ffff'=>'azure','f5f5dc'=>'beige','ffe4c4'=>'bisque','000000'=>'black','ffebcd'=>'blanchedalmond','0000ff'=>'blue','8a2be2'=>'blueviolet','a52a2a'=>'brown','deb887'=>'burlywood','ea7e5d'=>'burntsienna','5f9ea0'=>'cadetblue','7fff00'=>'chartreuse','d2691e'=>'chocolate','ff7f50'=>'coral','6495ed'=>'cornflowerblue','fff8dc'=>'cornsilk','dc143c'=>'crimson','00ffff'=>'cyan','00008b'=>'darkblue','008b8b'=>'darkcyan','b8860b'=>'darkgoldenrod','a9a9a9'=>'darkgray','006400'=>'darkgreen','a9a9a9'=>'darkgrey','bdb76b'=>'darkkhaki','8b008b'=>'darkmagenta','556b2f'=>'darkolivegreen','ff8c00'=>'darkorange','9932cc'=>'darkorchid','8b0000'=>'darkred','e9967a'=>'darksalmon','8fbc8f'=>'darkseagreen','483d8b'=>'darkslateblue','2f4f4f'=>'darkslategray','2f4f4f'=>'darkslategrey','00ced1'=>'darkturquoise','9400d3'=>'darkviolet','ff1493'=>'deeppink','00bfff'=>'deepskyblue','696969'=>'dimgray','696969'=>'dimgrey','1e90ff'=>'dodgerblue','b22222'=>'firebrick','fffaf0'=>'floralwhite','228b22'=>'forestgreen','ff00ff'=>'fuchsia','dcdcdc'=>'gainsboro','f8f8ff'=>'ghostwhite','ffd700'=>'gold','daa520'=>'goldenrod','808080'=>'gray','008000'=>'green','adff2f'=>'greenyellow','808080'=>'grey','f0fff0'=>'honeydew','ff69b4'=>'hotpink','cd5c5c'=>'indianred','4b0082'=>'indigo','fffff0'=>'ivory','f0e68c'=>'khaki','e6e6fa'=>'lavender','fff0f5'=>'lavenderblush','7cfc00'=>'lawngreen','fffacd'=>'lemonchiffon','add8e6'=>'lightblue','f08080'=>'lightcoral','e0ffff'=>'lightcyan','fafad2'=>'lightgoldenrodyellow','d3d3d3'=>'lightgray','90ee90'=>'lightgreen','d3d3d3'=>'lightgrey','ffb6c1'=>'lightpink','ffa07a'=>'lightsalmon','20b2aa'=>'lightseagreen','87cefa'=>'lightskyblue','778899'=>'lightslategray','778899'=>'lightslategrey','b0c4de'=>'lightsteelblue','ffffe0'=>'lightyellow','00ff00'=>'lime','32cd32'=>'limegreen','faf0e6'=>'linen','ff00ff'=>'magenta','800000'=>'maroon','66cdaa'=>'mediumaquamarine','0000cd'=>'mediumblue','ba55d3'=>'mediumorchid','9370db'=>'mediumpurple','3cb371'=>'mediumseagreen','7b68ee'=>'mediumslateblue','00fa9a'=>'mediumspringgreen','48d1cc'=>'mediumturquoise','c71585'=>'mediumvioletred','191970'=>'midnightblue','f5fffa'=>'mintcream','ffe4e1'=>'mistyrose','ffe4b5'=>'moccasin','ffdead'=>'navajowhite','000080'=>'navy','fdf5e6'=>'oldlace','808000'=>'olive','6b8e23'=>'olivedrab','ffa500'=>'orange','ff4500'=>'orangered','da70d6'=>'orchid','eee8aa'=>'palegoldenrod','98fb98'=>'palegreen','afeeee'=>'paleturquoise','db7093'=>'palevioletred','ffefd5'=>'papayawhip','ffdab9'=>'peachpuff','cd853f'=>'peru','ffc0cb'=>'pink','dda0dd'=>'plum','b0e0e6'=>'powderblue','800080'=>'purple','ff0000'=>'red','bc8f8f'=>'rosybrown','4169e1'=>'royalblue','8b4513'=>'saddlebrown','fa8072'=>'salmon','f4a460'=>'sandybrown','2e8b57'=>'seagreen','fff5ee'=>'seashell','a0522d'=>'sienna','c0c0c0'=>'silver','87ceeb'=>'skyblue','6a5acd'=>'slateblue','708090'=>'slategray','708090'=>'slategrey','fffafa'=>'snow','00ff7f'=>'springgreen','4682b4'=>'steelblue','d2b48c'=>'tan','008080'=>'teal','d8bfd8'=>'thistle','ff6347'=>'tomato','40e0d0'=>'turquoise','ee82ee'=>'violet','f5deb3'=>'wheat','ffffff'=>'white','f5f5f5'=>'whitesmoke','ffff00'=>'yellow','9acd32'=>'yellowgreen'
@@ -53,10 +53,10 @@ switch($mode){
 	);
 	break;
 	
-	case 'UIColor_hsl':
+	case 'UIColor_hsb':
 	$input = preg_replace('/[^0-9.,-]/', '', $q);
 	$input = explode(',',$input);
-	$rgba = UIColor_hsl(
+	$rgba = UIColor_hsb(
 		array_key_exists(0, $input) ? $input[0] : null,
 		array_key_exists(1, $input) ? $input[1] : null,
 		array_key_exists(2, $input) ? $input[2] : null,
@@ -75,10 +75,10 @@ switch($mode){
 	);
 	break;
 	
-	case 'NSColor_hsl':
+	case 'NSColor_hsb':
 	$input = preg_replace('/[^0-9.,-]/', '', $q);
 	$input = explode(',',$input);
-	$rgba = NSColor_hsl(
+	$rgba = NSColor_hsb(
 		array_key_exists(0, $input) ? $input[0] : null,
 		array_key_exists(1, $input) ? $input[1] : null,
 		array_key_exists(2, $input) ? $input[2] : null,
@@ -183,8 +183,8 @@ if($a == 1){
 $hex = tohex($r,$g,$b,$a);
 //$hexraw = tohexraw($r,$g,$b,$a);
 $hsl = tohsl($r,$g,$b,$a);
-$UIColor_hsl = toUIColor_hsl($r,$g,$b,$a);
-$NSColor_hsl = toNSColor_hsl($r,$g,$b,$a);
+$UIColor_hsb = toUIColor_hsb($r,$g,$b,$a);
+$NSColor_hsb = toNSColor_hsb($r,$g,$b,$a);
 $name = toname(tohexraw($r,$g,$b));
 $rgb = torgb($r,$g,$b,$a);
 $UIColor_rgb = toUIColor_rgb($r,$g,$b,$a);
@@ -197,9 +197,9 @@ $modes = array(
 	'rgb'=>$rgb,
 	'rgb_pcnt'=>$rgb_pcnt,
 	'UIColor_rgb'=>$UIColor_rgb,
-	'UIColor_hsl'=>$UIColor_hsl,
+	'UIColor_hsb'=>$UIColor_hsb,
 	'NSColor_rgb'=>$NSColor_rgb,
-	'NSColor_hsl'=>$NSColor_hsl,
+	'NSColor_hsb'=>$NSColor_hsb,
 );
 if(!$a){
 	$description = array(
@@ -209,9 +209,9 @@ if(!$a){
 		'rgb'=>'RGB format',
 		'rgb_pcnt'=>'RGB percent format',
 		'UIColor_rgb'=>'UIColor RGB format',
-		'UIColor_hsl'=>'UIColor HSL format',
+		'UIColor_hsb'=>'UIColor HSB format',
 		'NSColor_rgb'=>'NSColor RGB format',
-		'NSColor_hsl'=>'NSColor HSL format',
+		'NSColor_hsb'=>'NSColor HSB format',
 	);
 }else{
 	$description = array(
@@ -221,9 +221,9 @@ if(!$a){
 		'rgb'=>'RGBA format',
 		'rgb_pcnt'=>'RGBA percent format',
 		'UIColor_rgb'=>'UIColor RGBA format',
-		'UIColor_hsl'=>'UIColor HSLA format',
+		'UIColor_hsb'=>'UIColor HSBA format',
 		'NSColor_rgb'=>'NSColor RGBA format',
-		'NSColor_hsl'=>'NSColor HSLA format',
+		'NSColor_hsb'=>'NSColor HSBA format',
 	);
 }
 $json = jsonrgba($rgba);
@@ -327,7 +327,7 @@ function hsl($h=null, $s=null, $l=null, $a=null) {
 
 
 
-function UIColor_hsl($h=null, $s=null, $l=null, $a=null) {
+function UIColor_hsb($h=null, $s=null, $l=null, $a=null) {
 	$h = !$h ? 0 : $h;
 	$s = !$s ? 100 : $s;
 	$l = !$l ? 50 : $l;
@@ -368,7 +368,7 @@ function UIColor_hsl($h=null, $s=null, $l=null, $a=null) {
 	return array($r, $g, $b, 1);
 }
 
-function NSColor_hsl($h=null, $s=null, $l=null, $a=null) {
+function NSColor_hsb($h=null, $s=null, $l=null, $a=null) {
 	$h = !$h ? 0 : $h;
 	$s = !$s ? 100 : $s;
 	$l = !$l ? 50 : $l;
@@ -533,37 +533,33 @@ function tohsl($r=0, $g=0, $b=0, $a=false) {
 	return "hsl($h, $s%, $l%)";
 }
 
-
-function toUIColor_hsl($r=0, $g=0, $b=0, $a=false) {
-	$max = max($r,$g,$b);
-	$min = min($r,$g,$b);
-	$h = $s = $l = ($max + $min) / 2;
-	if($max == $min){
-		$h = $s = 0;
-	}else{
-		$d = $max - $min;
-		$s = $l > 0.5 ? $d / (2 - $max - $min) : $d / ($max + $min);
-		switch($max){
-			case $r: $h = ($g - $b) / $d + ($g < $b ? 6 : 0); break;
-			case $g: $h = ($b - $r) / $d + 2; break;
-			case $b: $h = ($r - $g) / $d + 4; break;
-		}
-		$h /= 6;
+function toUIColor_hsb($r=0, $g=0, $b=0, $a=false) {
+	$maxRGB = max($r, $g, $b);
+	$minRGB = min($r, $g, $b);
+	$chroma = $maxRGB - $minRGB;
+	$v = $maxRGB;
+	if ($chroma == 0) {
+	    return array(0, 0, $computedV);
 	}
-	$h = round($h * 360);
-	$s = round($s * 100,1);
-	$l = round($l * 100,1);
-	
+	$s = ($chroma / $maxRGB);
+	if ($r == $minRGB){
+	    $h = 3 - (($g - $b) / $chroma);
+	}
+	elseif ($B == $minRGB){
+	    $h = 1 - (($r - $g) / $chroma);
+	}
+	else {
+	    $h = 5 - (($b - $r) / $chroma);
+	}
+	$h = round($h/6,4);
+	$s = round($s,3);
+	$v = round($v,3);
 	if($a !== false){
 		$a = round($a, 3);
-		//[UIColor colorWithHue:0.589 saturation:0.373 brightness:0.294 alpha:1]
-//		return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l alpha:$a]";
+		return "[UIColor colorWithHue:$h saturation:$s brightness:$v alpha:$a]";
 	}
-	//return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l]";
-	return "[UIColor colorWithHue:$h saturation:$s brightness:$l]";
+	return "[UIColor colorWithHue:$h saturation:$s brightness:$v alpha:1.0]";
 }
-
-
 
 function toname($hex='') {
 	global $names;
@@ -573,6 +569,7 @@ function toname($hex='') {
 		return false;
 	}
 }
+
 function torgb($r=0, $g=0, $b=0, $a=false) {
 	$r = round($r*255);
 	$g = round($g*255);
@@ -584,17 +581,15 @@ function torgb($r=0, $g=0, $b=0, $a=false) {
 	return "rgb($r, $g, $b)";
 }
 
-
 function toUIColor_rgb($r=0, $g=0, $b=0, $a=false) {
 	$r = round($r*255);
 	$g = round($g*255);
 	$b = round($b*255);
 	if($a !== false){
 		$a = round($a, 3);
-		//[UIColor colorWithRed:0.204 green:0.259 blue:0.329 alpha:1]
-		return "[UIColor colorWithRed:$r green:$g blue:$b alpha:$a]";
+		return "[UIColor colorWithRed:$r.0/255.0 green:$g.0/255.0 blue:$b.0/255.0 alpha:$a]";
 	}
-	return "[UIColor colorWithRed:$r green:$g blue:$b alpha:1]";
+	return "[UIColor colorWithRed:$r.0/255.0 green:$g.0/255.0 blue:$b.0/255.0 alpha:1.0]";
 }
 
 function torgb_pcnt($r=0, $g=0, $b=0, $a=false) {
@@ -615,40 +610,37 @@ function toNSColor_rgb($r=0, $g=0, $b=0, $a=false) {
 	$b = round($b*255);
 	if($a !== false){
 		$a = round($a, 3);
-		//[UIColor colorWithRed:0.204 green:0.259 blue:0.329 alpha:1]
-		return "[NSColor colorWithCalibratedRed:$r green:$g blue:$b alpha:$a]";
+		return "[NSColor colorWithCalibratedRed:$r.0/255.0 green:$g.0/255.0 blue:$b.0/255.0 alpha:$a]";
 	}
-	return "[NSColor colorWithCalibratedRed:$r green:$g blue:$b alpha:1]";
+	return "[NSColor colorWithCalibratedRed:$r.0/255.0 green:$g.0/255.0 blue:$b.0/255.0 alpha:1.0]";
 }
 
-function toNSColor_hsl($r=0, $g=0, $b=0, $a=false) {
-	$max = max($r,$g,$b);
-	$min = min($r,$g,$b);
-	$h = $s = $l = ($max + $min) / 2;
-	if($max == $min){
-		$h = $s = 0;
-	}else{
-		$d = $max - $min;
-		$s = $l > 0.5 ? $d / (2 - $max - $min) : $d / ($max + $min);
-		switch($max){
-			case $r: $h = ($g - $b) / $d + ($g < $b ? 6 : 0); break;
-			case $g: $h = ($b - $r) / $d + 2; break;
-			case $b: $h = ($r - $g) / $d + 4; break;
-		}
-		$h /= 6;
+function toNSColor_hsb($r=0, $g=0, $b=0, $a=false) {
+	$maxRGB = max($r, $g, $b);
+	$minRGB = min($r, $g, $b);
+	$chroma = $maxRGB - $minRGB;
+	$v = $maxRGB;
+	if ($chroma == 0) {
+	    return array(0, 0, $computedV);
 	}
-	$h = round($h * 360);
-	$s = round($s * 100,1);
-	$l = round($l * 100,1);
-	
+	$s = ($chroma / $maxRGB);
+	if ($r == $minRGB){
+	    $h = 3 - (($g - $b) / $chroma);
+	}
+	elseif ($B == $minRGB){
+	    $h = 1 - (($r - $g) / $chroma);
+	}
+	else {
+	    $h = 5 - (($b - $r) / $chroma);
+	}
+	$h = round($h/6,4);
+	$s = round($s,3);
+	$v = round($v,3);
 	if($a !== false){
 		$a = round($a, 3);
-		//[UIColor colorWithHue:0.589 saturation:0.373 brightness:0.294 alpha:1]
-		//return "[UIColor colorWithHue:$h saturation:$s brightness:$l alpha:$a]";
-		return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l alpha:$a]";
+		return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$v alpha:$a]";
 	}
-	//return "[UIColor colorWithHue:$h saturation:$s brightness:$l]";
-	return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$l]";
+	return "[NSColor colorWithCalibratedHue:$h saturation:$s brightness:$v alpha:1.0]";
 }
 
 // Convert JSON to assoc array and vice versa
@@ -714,14 +706,14 @@ function format($mode='rgb', $rgba, $alpha=false, $name=false) {
 			case 'UIColor_rgb':
 			return toUIColor_rgb($r,$g,$b, $a);
 			
-			case 'UIColor_hsl':
-			return toUIColor_hsl($r,$g,$b,$a);
+			case 'UIColor_hsb':
+			return toUIColor_hsb($r,$g,$b,$a);
 
 			case 'NSColor_rgb':
 			return toNSColor_rgb($r,$g,$b, $a);
 			
-			case 'NSColor_hsl':
-			return toNSColor_hsl($r,$g,$b,$a);
+			case 'NSColor_hsb':
+			return toNSColor_hsb($r,$g,$b,$a);
 		
 			case 'name':
 			return torgb($r,$g,$b,$a);
@@ -743,14 +735,14 @@ function format($mode='rgb', $rgba, $alpha=false, $name=false) {
 		case 'UIColor_rgb':
 		return toUIColor_rgb($r,$g,$b);
 		
-		case 'UIColor_hsl':
-		return toUIColor_hsl($r,$g,$b);
+		case 'UIColor_hsb':
+		return toUIColor_hsb($r,$g,$b);
 		
 		case 'NSColor_rgb':
 		return toNSColor_rgb($r,$g,$b);
 		
-		case 'NSColor_hsl':
-		return toNSColor_hsl($r,$g,$b);
+		case 'NSColor_hsb':
+		return toNSColor_hsb($r,$g,$b);
 		
 		case 'name':
 		if ($name) {
