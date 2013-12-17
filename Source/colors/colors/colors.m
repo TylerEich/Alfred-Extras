@@ -58,7 +58,7 @@
 
 @implementation Colors
 - (void) savePreviewToPath: (NSString*)path {
-    NSImage *preview = [[NSImage alloc] initWithContentsOfFile:@"checker.png"];
+    NSImage *preview = [[NSImage alloc] initWithContentsOfFile:@"contrast.png"];
     [preview lockFocus];
     [color setFill];
     NSRectFillUsingOperation(NSMakeRect(6, 6, 84, 84), NSCompositeSourceOver);
@@ -187,7 +187,6 @@
 
     NSString *hexadecimal = [color hexadecimal];
     bool ignoreAlpha = (toggleAlpha == (a != 1.0));
-    // TODO: add NSColor Device formats
     if (s == 0)
      {
         ns = @[@{
@@ -376,9 +375,9 @@
 
         unsigned long queryLength = [query length];
         NSString *expandedQuery = @"";
+        NSString *substring;
         for (int i = 0; i < queryLength; i++)
          {
-            NSString *substring;
             substring = [query substringWithRange:NSMakeRange(i, 1)];
             if (queryLength <= 3) // Shorthand (e.g. #fff)
              {
@@ -506,14 +505,20 @@
             NSString *firstComponent = [queryArray objectAtIndex:0];
             NSString *nsModelPrefix = @"-calibrated";
 
+            if ([format isEqual:@"ns"])
+             {
+                if ([firstComponent rangeOfString:@"d"].location != NSNotFound)
+                 {
+                    firstComponent = [firstComponent stringByReplacingOccurrencesOfString:@"d" withString:@""];
+                    nsModelPrefix = @"-device";
+                 }
+             }
+
+
             if ([firstComponent hasPrefix:@"w"]) model = @"-white";
             else if ([firstComponent hasPrefix:@"h"]) model = @"-hsb";
 
-            if ([format isEqual:@"ns"])
-             {
-                if ([firstComponent rangeOfString:@"d"].location != NSNotFound) nsModelPrefix = @"-device";
-                model = [nsModelPrefix stringByAppendingString:model];
-             }
+            if ([format isEqual:@"ns"]) model = [nsModelPrefix stringByAppendingString:model];
 
             firstComponent = [firstComponent stringByPreservingCharactersInString:@"0123456789."];
             if ([firstComponent isEqual:@""]) [queryArray removeObjectAtIndex:0];

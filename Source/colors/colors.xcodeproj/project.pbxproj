@@ -11,7 +11,7 @@
 		2F173505180037D9002DD3EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F173504180037D9002DD3EB /* main.m */; };
 		2F17350818003DD5002DD3EB /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F17350718003DD5002DD3EB /* colors.m */; };
 		2F7DDDA81804C5B900DA5AD4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7DDDA71804C5B900DA5AD4 /* AppKit.framework */; };
-		2FDBC6861823129500130041 /* Alfred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDBC6851823129500130041 /* Alfred.framework */; };
+		2F8FE80F1860FB3D00338249 /* Alfred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8FE80E1860FB3D00338249 /* Alfred.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +34,7 @@
 		2F17350718003DD5002DD3EB /* colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colors.m; sourceTree = "<group>"; usesTabs = 0; };
 		2F2B7F5B180F286C0002B867 /* alfred.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfred.scpt; sourceTree = "<group>"; };
 		2F7DDDA71804C5B900DA5AD4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		2FDBC6851823129500130041 /* Alfred.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alfred.framework; sourceTree = "<group>"; };
+		2F8FE80E1860FB3D00338249 /* Alfred.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alfred.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FDBC6861823129500130041 /* Alfred.framework in Frameworks */,
+				2F8FE80F1860FB3D00338249 /* Alfred.framework in Frameworks */,
 				2F7DDDA81804C5B900DA5AD4 /* AppKit.framework in Frameworks */,
 				2F1734F91800356E002DD3EB /* CoreFoundation.framework in Frameworks */,
 			);
@@ -54,6 +54,7 @@
 		2F1734EC1800356D002DD3EB = {
 			isa = PBXGroup;
 			children = (
+				2F8FE80E1860FB3D00338249 /* Alfred.framework */,
 				2F1734FA1800356E002DD3EB /* colors */,
 				2F1734F71800356E002DD3EB /* Frameworks */,
 				2F1734F61800356E002DD3EB /* Products */,
@@ -71,7 +72,6 @@
 		2F1734F71800356E002DD3EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2FDBC6851823129500130041 /* Alfred.framework */,
 				2F7DDDA71804C5B900DA5AD4 /* AppKit.framework */,
 				2F1734F81800356E002DD3EB /* CoreFoundation.framework */,
 			);
@@ -221,7 +221,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Tyler/Developer/colors,
+					"/Users/Tyler/Developer/Alfred-Extras/Source/colors",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -232,7 +232,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Tyler/Developer/colors,
+					"/Users/Tyler/Developer/Alfred-Extras/Source/colors",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

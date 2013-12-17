@@ -87,7 +87,7 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "[NSColor colorWithCalibratedHue: 0.260 saturation: 0.900 brightness: 0.295 alpha: 0.5]"
+            argument = "[NSColor colorWithDeviceHue: 0.260 saturation: 0.900 brightness: 0.295 alpha: 0.5]"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

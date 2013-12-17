@@ -52,8 +52,7 @@ int main(int argc, const char *argv[])
             [colors fallbackToColorPanelResult];
          }
 
-        if ([colors input:query]) [colors fallbackToColorPanelResult];
-        else [colors fallbackToColorPanelResult:@"No Results"];
+        if ([colors input:query]) [colors fallbackToColorPanelResult:@"No Results"];
 
         [colors feedback];
      }
