@@ -281,14 +281,14 @@
         css = @[@{
                     @"id":@"css-rgb",
                     @"description":@"CSS • RGBA",
-                    @"argument":[NSString stringWithFormat:@"rgb(%.f, %.f, %.f, %.2g)", r * 255.0, g * 255.0, b * 255.0, a],
-                    @"autocomplete":[NSString stringWithFormat:@"(%.f, %.f, %.f, %.2g)", r * 255.0, g * 255.0, b * 255.0, a]
+                    @"argument":[NSString stringWithFormat:@"rgba(%.f, %.f, %.f, %.2g)", r * 255.0, g * 255.0, b * 255.0, a],
+                    @"autocomplete":[NSString stringWithFormat:@"a(%.f, %.f, %.f, %.2g)", r * 255.0, g * 255.0, b * 255.0, a]
                     },
                 @{
                     @"id":@"css-rgb%",
                     @"description":@"CSS • RGBA Percent",
-                    @"argument":[NSString stringWithFormat:@"rgb(%.f%%, %.f%%, %.f%%, %.f)", r * 100.0, g * 100.0, b * 100.0, a],
-                    @"autocomplete":[NSString stringWithFormat:@"(%.f%%, %.f%%, %.f%%, %.f)", r * 100.0, g * 100.0, b * 100.0, a]
+                    @"argument":[NSString stringWithFormat:@"rgba(%.f%%, %.f%%, %.f%%, %.f)", r * 100.0, g * 100.0, b * 100.0, a],
+                    @"autocomplete":[NSString stringWithFormat:@"a(%.f%%, %.f%%, %.f%%, %.f)", r * 100.0, g * 100.0, b * 100.0, a]
                     },
                 @{
                     @"id":@"css-hex",
@@ -299,8 +299,8 @@
                 @{
                     @"id":@"css-hsl",
                     @"description":@"CSS • HSLA",
-                    @"argument":[NSString stringWithFormat:@"hsl(%.f, %.f%%, %.f%%, %.2g)", h * 360.0, ss * 100.0, l * 100.0, a],
-                    @"autocomplete":[NSString stringWithFormat:@"(%.f, %.f%%, %.f%%, %.2g)", h * 360.0, ss * 100.0, l * 100.0, a]
+                    @"argument":[NSString stringWithFormat:@"hsla(%.f, %.f%%, %.f%%, %.2g)", h * 360.0, ss * 100.0, l * 100.0, a],
+                    @"autocomplete":[NSString stringWithFormat:@"a(%.f, %.f%%, %.f%%, %.2g)", h * 360.0, ss * 100.0, l * 100.0, a]
                     }
                 ];
      }
