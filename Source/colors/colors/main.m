@@ -47,12 +47,25 @@ int main(int argc, const char *argv[])
 
     if (!check && !flush && !reveal && !toggleAlpha) // No flags; live feedback mode
      {
-        if ([query length] == 0)
+        NSArray *prefixes = @[
+                              @"",
+                              @"#",
+                              @"rgb",
+                              @"rgba",
+                              @"hsl",
+                              @"hsla",
+                              @"[ns",
+                              @"[ui"
+                              ];
+        if ([prefixes containsObject:[query lowercaseString]])
          {
             [colors fallbackToColorPanelResult];
          }
 
-        if ([colors input:query]) [colors fallbackToColorPanelResult:@"No Results"];
+        if ([colors input:query])
+         {
+            [colors fallbackToColorPanelResult:@"No Results"];
+         }
 
         [colors feedback];
      }

@@ -88,15 +88,15 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "[NSColor colorWithDeviceHue: 0.260 saturation: 0.900 brightness: 0.295 alpha: 0.5]"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "&apos;[NSColor colorWithCalibratedWhite: 1.000 alpha: 0.20]&apos;"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "&apos;[NSw0.632 1&apos;"
-            isEnabled = "NO">
+            argument = "[NS h"
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = " "

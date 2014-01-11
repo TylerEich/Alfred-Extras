@@ -14,7 +14,7 @@
                                                     [[NSCharacterSet characterSetWithCharactersInString:preservedCharacters] invertedSet]];
     if ([stringArray count] == 1) stringArray = [NSMutableArray arrayWithObject:self];
     if ([stringArray indexOfObject:@""] != NSNotFound) [stringArray removeObject:@""];
-    return [stringArray componentsJoinedByString:@""];
+    return [[stringArray componentsJoinedByString:@""] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 - (NSMutableArray*) componentsSeparatedByCharactersInString: (NSString*)separatorCharacters {
     NSMutableArray *stringArray = (NSMutableArray*)[self componentsSeparatedByCharactersInSet:
@@ -481,8 +481,6 @@
          }
         NSString *model = @"-rgb";
         query = [query lowercaseString];
-        query = [query stringByReplacingOccurrencesOfString:@"[NS" withString:@""];
-        query = [query stringByReplacingOccurrencesOfString:@"[UI" withString:@""];
         query = [query stringByReplacingOccurrencesOfString:@"co" withString:@""]; // 'color' == 'c'
         query = [query stringByReplacingOccurrencesOfString:@"ed" withString:@""]; // 'calibrated' == 'd'
         query = [query stringByReplacingOccurrencesOfString:@"ic" withString:@""]; // 'device' == 'c'
@@ -526,6 +524,8 @@
          }
 
         [self setPreferredFormat:model forKey:format];
+
+        if ([queryArray count] == 0) return YES;
 
         if ([model hasSuffix:@"rgb"])
          {
