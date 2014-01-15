@@ -41,7 +41,6 @@
      {
         color = [NSUnarchiver unarchiveObjectWithData:[defaults dataForKey:@"color"]];
      }
-    //NSColor *color = [NSColor colorWithCalibratedWhite:0.4 alpha:0.9];
 
     NSButton *choose = [[NSButton alloc] initWithFrame:NSMakeRect(80, 2, 80, 28)];
     [choose setButtonType:NSMomentaryPushInButton];

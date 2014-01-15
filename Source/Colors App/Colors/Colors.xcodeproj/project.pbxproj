@@ -17,6 +17,7 @@
 		2F0BB06D180F7F3D001126D2 /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BB06C180F7F3D001126D2 /* ColorsTests.m */; };
 		2F0BB07B181078D5001126D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BB079181078D5001126D2 /* main.m */; };
 		2F0BB08018109883001126D2 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BB078181078D5001126D2 /* AppController.m */; };
+		2FC96EF118860C9100CFF814 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC96EEF18860C9100CFF814 /* Settings.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		2F0BB077181078D5001126D2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2F0BB078181078D5001126D2 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2F0BB079181078D5001126D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2FC96EF018860C9100CFF814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Settings.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				2F0BB078181078D5001126D2 /* AppController.m */,
 				2F0BB079181078D5001126D2 /* main.m */,
 				2F0BB054180F7F3C001126D2 /* MainMenu.xib */,
+				2FC96EEF18860C9100CFF814 /* Settings.xib */,
 				2F0BB046180F7F3C001126D2 /* Supporting Files */,
 			);
 			path = Colors;
@@ -236,6 +239,7 @@
 			files = (
 				2F0BB04A180F7F3C001126D2 /* InfoPlist.strings in Resources */,
 				2F0BB050180F7F3C001126D2 /* Credits.rtf in Resources */,
+				2FC96EF118860C9100CFF814 /* Settings.xib in Resources */,
 				2F0BB056180F7F3C001126D2 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +313,14 @@
 				2F0BB06A180F7F3D001126D2 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2FC96EEF18860C9100CFF814 /* Settings.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FC96EF018860C9100CFF814 /* Base */,
+			);
+			name = Settings.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
