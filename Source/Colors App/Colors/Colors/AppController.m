@@ -84,6 +84,10 @@
     [NSApp terminate:self];
 }
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
+
 - (void) applicationWillTerminate: (id)sender {
     NSColor *color = [colorPanel color];
     NSData *data = [NSArchiver archivedDataWithRootObject:color];

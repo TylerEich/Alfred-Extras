@@ -40,6 +40,19 @@
 
 @interface NSColor (Colors)
 - (NSString*) hexadecimal;
+
+- (NSColor*) colorWithOffsetHue: (float)hueOffset
+                     saturation: (float)saturationOffset
+                     brightness: (float)brightnessOffset
+                          alpha: (float)alphaOffset;
+- (NSColor*) complement;
+- (NSColor*) triadByDecimal: (float)decimal;
+- (NSColor*) tetradByDecimal: (float)decimal
+           fromComplementary: (bool)fromComplementary;
+- (NSColor*) analogicByDecimal: (float)decimal;
+- (NSColor*) brightenByDecimal: (float)decimal;
+- (NSColor*) saturateByDecimal: (float)decimal;
+
 + (NSArray*) namedColors;
 @end
 
