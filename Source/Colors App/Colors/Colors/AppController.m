@@ -84,8 +84,16 @@
     [NSApp terminate:self];
 }
 
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
-    return YES;
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication*)theApplication {
+    NSEventType type = [[theApplication currentEvent] type];
+    if (type == NSSystemDefined)
+     {
+        return NO;
+     }
+    else
+     {
+        return YES;
+     }
 }
 
 - (void) applicationWillTerminate: (id)sender {
