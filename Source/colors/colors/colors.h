@@ -53,7 +53,8 @@
 - (NSColor*) brightenByDecimal: (float)decimal;
 - (NSColor*) saturateByDecimal: (float)decimal;
 
-+ (NSArray*) namedColors;
++ (NSArray*) cssNamedColors;
++ (NSArray*) objCNamedColors;
 @end
 
 @interface NSImage (Colors)

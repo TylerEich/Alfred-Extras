@@ -106,8 +106,14 @@
                               alpha:0];
 }
 
-+ (NSArray*) namedColors {
++ (NSArray*) cssNamedColors {
     return @[@{@"value":@"f0f8ffff",@"name":@"aliceblue"},@{@"value":@"faebd7ff",@"name":@"antiquewhite"},@{@"value":@"00ffffff",@"name":@"aqua"},@{@"value":@"7fffd4ff",@"name":@"aquamarine"},@{@"value":@"f0ffffff",@"name":@"azure"},@{@"value":@"f5f5dcff",@"name":@"beige"},@{@"value":@"ffe4c4ff",@"name":@"bisque"},@{@"value":@"000000ff",@"name":@"black"},@{@"value":@"ffebcdff",@"name":@"blanchedalmond"},@{@"value":@"0000ffff",@"name":@"blue"},@{@"value":@"8a2be2ff",@"name":@"blueviolet"},@{@"value":@"a52a2aff",@"name":@"brown"},@{@"value":@"deb887ff",@"name":@"burlywood"},@{@"value":@"ea7e5dff",@"name":@"burntsienna"},@{@"value":@"5f9ea0ff",@"name":@"cadetblue"},@{@"value":@"7fff00ff",@"name":@"chartreuse"},@{@"value":@"d2691eff",@"name":@"chocolate"},@{@"value":@"ff7f50ff",@"name":@"coral"},@{@"value":@"6495edff",@"name":@"cornflowerblue"},@{@"value":@"fff8dcff",@"name":@"cornsilk"},@{@"value":@"dc143cff",@"name":@"crimson"},@{@"value":@"00ffffff",@"name":@"cyan"},@{@"value":@"00008bff",@"name":@"darkblue"},@{@"value":@"008b8bff",@"name":@"darkcyan"},@{@"value":@"b8860bff",@"name":@"darkgoldenrod"},@{@"value":@"a9a9a9ff",@"name":@"darkgray"},@{@"value":@"006400ff",@"name":@"darkgreen"},@{@"value":@"a9a9a9ff",@"name":@"darkgrey"},@{@"value":@"bdb76bff",@"name":@"darkkhaki"},@{@"value":@"8b008bff",@"name":@"darkmagenta"},@{@"value":@"556b2fff",@"name":@"darkolivegreen"},@{@"value":@"ff8c00ff",@"name":@"darkorange"},@{@"value":@"9932ccff",@"name":@"darkorchid"},@{@"value":@"8b0000ff",@"name":@"darkred"},@{@"value":@"e9967aff",@"name":@"darksalmon"},@{@"value":@"8fbc8fff",@"name":@"darkseagreen"},@{@"value":@"483d8bff",@"name":@"darkslateblue"},@{@"value":@"2f4f4fff",@"name":@"darkslategray"},@{@"value":@"2f4f4fff",@"name":@"darkslategrey"},@{@"value":@"00ced1ff",@"name":@"darkturquoise"},@{@"value":@"9400d3ff",@"name":@"darkviolet"},@{@"value":@"ff1493ff",@"name":@"deeppink"},@{@"value":@"00bfffff",@"name":@"deepskyblue"},@{@"value":@"696969ff",@"name":@"dimgray"},@{@"value":@"696969ff",@"name":@"dimgrey"},@{@"value":@"1e90ffff",@"name":@"dodgerblue"},@{@"value":@"b22222ff",@"name":@"firebrick"},@{@"value":@"fffaf0ff",@"name":@"floralwhite"},@{@"value":@"228b22ff",@"name":@"forestgreen"},@{@"value":@"ff00ffff",@"name":@"fuchsia"},@{@"value":@"dcdcdcff",@"name":@"gainsboro"},@{@"value":@"f8f8ffff",@"name":@"ghostwhite"},@{@"value":@"ffd700ff",@"name":@"gold"},@{@"value":@"daa520ff",@"name":@"goldenrod"},@{@"value":@"808080ff",@"name":@"gray"},@{@"value":@"008000ff",@"name":@"green"},@{@"value":@"adff2fff",@"name":@"greenyellow"},@{@"value":@"808080ff",@"name":@"grey"},@{@"value":@"f0fff0ff",@"name":@"honeydew"},@{@"value":@"ff69b4ff",@"name":@"hotpink"},@{@"value":@"cd5c5cff",@"name":@"indianred"},@{@"value":@"4b0082ff",@"name":@"indigo"},@{@"value":@"fffff0ff",@"name":@"ivory"},@{@"value":@"f0e68cff",@"name":@"khaki"},@{@"value":@"e6e6faff",@"name":@"lavender"},@{@"value":@"fff0f5ff",@"name":@"lavenderblush"},@{@"value":@"7cfc00ff",@"name":@"lawngreen"},@{@"value":@"fffacdff",@"name":@"lemonchiffon"},@{@"value":@"add8e6ff",@"name":@"lightblue"},@{@"value":@"f08080ff",@"name":@"lightcoral"},@{@"value":@"e0ffffff",@"name":@"lightcyan"},@{@"value":@"fafad2ff",@"name":@"lightgoldenrodyellow"},@{@"value":@"d3d3d3ff",@"name":@"lightgray"},@{@"value":@"90ee90ff",@"name":@"lightgreen"},@{@"value":@"d3d3d3ff",@"name":@"lightgrey"},@{@"value":@"ffb6c1ff",@"name":@"lightpink"},@{@"value":@"ffa07aff",@"name":@"lightsalmon"},@{@"value":@"20b2aaff",@"name":@"lightseagreen"},@{@"value":@"87cefaff",@"name":@"lightskyblue"},@{@"value":@"778899ff",@"name":@"lightslategray"},@{@"value":@"778899ff",@"name":@"lightslategrey"},@{@"value":@"b0c4deff",@"name":@"lightsteelblue"},@{@"value":@"ffffe0ff",@"name":@"lightyellow"},@{@"value":@"00ff00ff",@"name":@"lime"},@{@"value":@"32cd32ff",@"name":@"limegreen"},@{@"value":@"faf0e6ff",@"name":@"linen"},@{@"value":@"ff00ffff",@"name":@"magenta"},@{@"value":@"800000ff",@"name":@"maroon"},@{@"value":@"66cdaaff",@"name":@"mediumaquamarine"},@{@"value":@"0000cdff",@"name":@"mediumblue"},@{@"value":@"ba55d3ff",@"name":@"mediumorchid"},@{@"value":@"9370dbff",@"name":@"mediumpurple"},@{@"value":@"3cb371ff",@"name":@"mediumseagreen"},@{@"value":@"7b68eeff",@"name":@"mediumslateblue"},@{@"value":@"00fa9aff",@"name":@"mediumspringgreen"},@{@"value":@"48d1ccff",@"name":@"mediumturquoise"},@{@"value":@"c71585ff",@"name":@"mediumvioletred"},@{@"value":@"191970ff",@"name":@"midnightblue"},@{@"value":@"f5fffaff",@"name":@"mintcream"},@{@"value":@"ffe4e1ff",@"name":@"mistyrose"},@{@"value":@"ffe4b5ff",@"name":@"moccasin"},@{@"value":@"ffdeadff",@"name":@"navajowhite"},@{@"value":@"000080ff",@"name":@"navy"},@{@"value":@"fdf5e6ff",@"name":@"oldlace"},@{@"value":@"808000ff",@"name":@"olive"},@{@"value":@"6b8e23ff",@"name":@"olivedrab"},@{@"value":@"ffa500ff",@"name":@"orange"},@{@"value":@"ff4500ff",@"name":@"orangered"},@{@"value":@"da70d6ff",@"name":@"orchid"},@{@"value":@"eee8aaff",@"name":@"palegoldenrod"},@{@"value":@"98fb98ff",@"name":@"palegreen"},@{@"value":@"afeeeeff",@"name":@"paleturquoise"},@{@"value":@"db7093ff",@"name":@"palevioletred"},@{@"value":@"ffefd5ff",@"name":@"papayawhip"},@{@"value":@"ffdab9ff",@"name":@"peachpuff"},@{@"value":@"cd853fff",@"name":@"peru"},@{@"value":@"ffc0cbff",@"name":@"pink"},@{@"value":@"dda0ddff",@"name":@"plum"},@{@"value":@"b0e0e6ff",@"name":@"powderblue"},@{@"value":@"800080ff",@"name":@"purple"},@{@"value":@"ff0000ff",@"name":@"red"},@{@"value":@"bc8f8fff",@"name":@"rosybrown"},@{@"value":@"4169e1ff",@"name":@"royalblue"},@{@"value":@"8b4513ff",@"name":@"saddlebrown"},@{@"value":@"fa8072ff",@"name":@"salmon"},@{@"value":@"f4a460ff",@"name":@"sandybrown"},@{@"value":@"2e8b57ff",@"name":@"seagreen"},@{@"value":@"fff5eeff",@"name":@"seashell"},@{@"value":@"a0522dff",@"name":@"sienna"},@{@"value":@"c0c0c0ff",@"name":@"silver"},@{@"value":@"87ceebff",@"name":@"skyblue"},@{@"value":@"6a5acdff",@"name":@"slateblue"},@{@"value":@"708090ff",@"name":@"slategray"},@{@"value":@"708090ff",@"name":@"slategrey"},@{@"value":@"fffafaff",@"name":@"snow"},@{@"value":@"00ff7fff",@"name":@"springgreen"},@{@"value":@"4682b4ff",@"name":@"steelblue"},@{@"value":@"d2b48cff",@"name":@"tan"},@{@"value":@"008080ff",@"name":@"teal"},@{@"value":@"d8bfd8ff",@"name":@"thistle"},@{@"value":@"ff6347ff",@"name":@"tomato"},@{@"value":@"00000000",@"name":@"transparent"},@{@"value":@"40e0d0ff",@"name":@"turquoise"},@{@"value":@"ee82eeff",@"name":@"violet"},@{@"value":@"f5deb3ff",@"name":@"wheat"},@{@"value":@"ffffffff",@"name":@"white"},@{@"value":@"f5f5f5ff",@"name":@"whitesmoke"},@{@"value":@"ffff00ff",@"name":@"yellow"},@{@"value":@"9acd32ff",@"name":@"yellowgreen"}];
+}
++ (NSArray*) objCNamedColors {
+    return @[@{@"value":[NSColor blackColor],@"name":@"blackColor"},@{@"value":[NSColor blueColor],@"name":@"blueColor"},@{@"value":[NSColor brownColor],@"name":@"brownColor"},@{@"value":[NSColor clearColor],@"name":@"clearColor"},@{@"value":[NSColor cyanColor],@"name":@"cyanColor"},@{@"value":[NSColor darkGrayColor],@"name":@"darkGrayColor"},@{@"value":[NSColor grayColor],@"name":@"grayColor"},@{@"value":[NSColor greenColor],@"name":@"greenColor"},@{@"value":[NSColor lightGrayColor],@"name":@"lightGrayColor"},@{@"value":[NSColor magentaColor],@"name":@"magentaColor"},@{@"value":[NSColor orangeColor],@"name":@"orangeColor"},@{@"value":[NSColor purpleColor],@"name":@"purpleColor"},@{@"value":[NSColor redColor],@"name":@"redColor"},@{@"value":[NSColor whiteColor],@"name":@"whiteColor"},@{@"value":[NSColor yellowColor],@"name":@"yellowColor"}];
+}
++ (NSArray*) nsNamedColors {
+    return @[@{@"value":[NSColor alternateSelectedControlColor],@"name":@"alternateSelectedControlColor"},@{@"value":[NSColor alternateSelectedControlTextColor],@"name":@"alternateSelectedControlTextColor"},@{@"value":[NSColor controlBackgroundColor],@"name":@"controlBackgroundColor"},@{@"value":[NSColor controlColor],@"name":@"controlColor"},@{@"value":[NSColor controlAlternatingRowBackgroundColors],@"name":@"controlAlternatingRowBackgroundColors"},@{@"value":[NSColor controlHighlightColor],@"name":@"controlHighlightColor"},@{@"value":[NSColor controlLightHighlightColor],@"name":@"controlLightHighlightColor"},@{@"value":[NSColor controlShadowColor],@"name":@"controlShadowColor"},@{@"value":[NSColor controlDarkShadowColor],@"name":@"controlDarkShadowColor"},@{@"value":[NSColor controlTextColor],@"name":@"controlTextColor"},@{@"value":[NSColor disabledControlTextColor],@"name":@"disabledControlTextColor"},@{@"value":[NSColor gridColor],@"name":@"gridColor"},@{@"value":[NSColor headerColor],@"name":@"headerColor"},@{@"value":[NSColor headerTextColor],@"name":@"headerTextColor"},@{@"value":[NSColor highlightColor],@"name":@"highlightColor"},@{@"value":[NSColor keyboardFocusIndicatorColor],@"name":@"keyboardFocusIndicatorColor"},@{@"value":[NSColor knobColor],@"name":@"knobColor"},@{@"value":[NSColor scrollBarColor],@"name":@"scrollBarColor"},@{@"value":[NSColor secondarySelectedControlColor],@"name":@"secondarySelectedControlColor"},@{@"value":[NSColor selectedControlColor],@"name":@"selectedControlColor"},@{@"value":[NSColor selectedControlTextColor],@"name":@"selectedControlTextColor"},@{@"value":[NSColor selectedMenuItemColor],@"name":@"selectedMenuItemColor"},@{@"value":[NSColor selectedMenuItemTextColor],@"name":@"selectedMenuItemTextColor"},@{@"value":[NSColor selectedTextBackgroundColor],@"name":@"selectedTextBackgroundColor"},@{@"value":[NSColor selectedTextColor],@"name":@"selectedTextColor"},@{@"value":[NSColor selectedKnobColor],@"name":@"selectedKnobColor"},@{@"value":[NSColor shadowColor],@"name":@"shadowColor"},@{@"value":[NSColor textBackgroundColor],@"name":@"textBackgroundColor"},@{@"value":[NSColor textColor],@"name":@"textColor"},@{@"value":[NSColor windowBackgroundColor],@"name":@"windowBackgroundColor"},@{@"value":[NSColor windowFrameColor],@"name":@"windowFrameColor"},@{@"value":[NSColor windowFrameTextColor],@"name":@"windowFrameTextColor"},@{@"value":[NSColor underPageBackgroundColor],@"name":@"underPageBackgroundColor"}];
 }
 @end
 
@@ -378,7 +384,7 @@
                 ];
      }
 
-    NSDictionary *namedColor = [self searchNamedColors:hexadecimal usingKey:@"value"];
+    NSDictionary *namedColor = [self searchCssNamedColors:hexadecimal usingKey:@"value"];
     if ([namedColor count] > 0) css = [css arrayByAddingObject:@{
                                                                  @"id":@"css-named",
                                                                  @"description":@"CSS • Named Color",
@@ -554,14 +560,16 @@
          }
         NSString *model = @"-rgb";
         query = [query lowercaseString];
-        query = [query stringByReplacingOccurrencesOfString:@"co" withString:@""]; // 'color' == 'c'
-        query = [query stringByReplacingOccurrencesOfString:@"ed" withString:@""]; // 'calibrated' == 'd'
-        query = [query stringByReplacingOccurrencesOfString:@"ic" withString:@""]; // 'device' == 'c'
-        query = [query stringByReplacingOccurrencesOfString:@"with" withString:@""]; // 'with' == 'w' & 'h'
-        query = [query stringByReplacingOccurrencesOfString:@"gh" withString:@""]; // 'brightness' == 'h'
-        query = [query stringByReplacingOccurrencesOfString:@"ph" withString:@""]; // 'alpha' == 'h'
 
-        query = [query stringByPreservingCharactersInString:@"0123456789.whcd \t\n"];
+        NSString *componentQuery = query;
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"co" withString:@""]; // 'color' == 'c'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"ed" withString:@""]; // 'calibrated' == 'd'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"ic" withString:@""]; // 'device' == 'c'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"with" withString:@""]; // 'with' == 'w' & 'h'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"gh" withString:@""]; // 'brightness' == 'h'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"ph" withString:@""]; // 'alpha' == 'h'
+
+        componentQuery = [componentQuery stringByPreservingCharactersInString:@"0123456789.whcd \t\n"];
 
         if ([query isEqual:@""])
          {
@@ -632,6 +640,21 @@
                                                                             brightness:v
                                                                                  alpha:a]];
          }
+        else // Search named colors
+         {
+            if ([format isEqual:@"ns"] || [format isEqual:@"ui"])
+             {
+                // Search Objective-C named colors
+             }
+            if ([format isEqual:@"ns"])
+             {
+                // Search NS named colors
+             }
+            else
+             {
+                return NO;
+             }
+         }
      }
     else // Nothing else matches; check CSS named colors
      {
@@ -640,7 +663,7 @@
 
         if ([query isEqual:@""]) return YES; // Stop trying to parse. No point.
 
-        NSDictionary *match = [self searchNamedColors:query usingKey:@"name"];
+        NSDictionary *match = [self searchCssNamedColors:query usingKey:@"name"];
         if ([match count] == 0)
          {
             [self setMostRecentKey:@"css"];
@@ -696,7 +719,7 @@
 - (NSString*) preferredFormatForMostRecentKey {
     return [self preferredFormatForKey:[self mostRecentKey]];
 }
-- (NSDictionary*) searchNamedColors: (NSString*)query usingKey:(NSString*)key {
+- (NSDictionary*) searchCssNamedColors: (NSString*)query usingKey:(NSString*)key {
     NSPredicate *predicate;
 
     if ([key isEqualToString:@"name"])
@@ -717,7 +740,7 @@
         return @{};
      }
 
-    NSArray *matches = [[NSColor namedColors] filteredArrayUsingPredicate:predicate];
+    NSArray *matches = [[NSColor cssNamedColors] filteredArrayUsingPredicate:predicate];
     if ([matches count] > 0) return [matches objectAtIndex:0];
     else return @{};
 }
