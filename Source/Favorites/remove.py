@@ -9,7 +9,7 @@ else:
 	raise SystemExit
 # SCRIPT EXITS
 
-
+# Sync & load favorites
 favs = alp.jsonLoad('favorites.json', default=[])
 if type(favs) is DictType:
 	favs = favs.values()
@@ -25,7 +25,6 @@ for fav in favs:
 	if path.exists(fav):
 		new_favs.append(fav)
 favs = new_favs
-alp.jsonDump(favs, 'favorites.json')
 
 # Remove specified entries
 deleted = []
@@ -34,7 +33,7 @@ for delete in deletes:
 		index = favs.remove(delete)
 		deleted.append(delete)
 
-# Save new list
+# Save & sync new list
 alp.jsonDump(favs, 'favorites.json')
 
 # User feedback

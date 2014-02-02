@@ -7,6 +7,7 @@ if len(alp.args()) > 0:
 else:
 	query = ''
 
+# Sync & load favorites
 favs = alp.jsonLoad('favorites.json', default=[])
 if type(favs) is DictType:
 	favs = favs.values()
