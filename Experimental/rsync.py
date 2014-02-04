@@ -1,7 +1,7 @@
 from subprocess import call
 from os import path
 
-def rsync(path1=None, path2=None):
+def sync(path1=None, path2=None):
 	# Prefer path1 as source
 	if path.exists(path1):
 		call(['rsync', '-u', '-r', path1, path2])
