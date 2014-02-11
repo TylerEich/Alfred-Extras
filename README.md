@@ -1,7 +1,21 @@
 #Alfred Extras
-A collection of workflows for [Alfred](http://www.alfredapp.com "Alfred App") (v2.0 and above)
 
-##MIT License
-This repository is available under the MIT License. Check out [LICENSE.md](https://github.com/TylerEich/Alfred-Extras/blob/master/LICENSE.md) to see what it says.
+Workflows for [Alfred](http://www.alfredapp.com "Alfred App"), authored by [@TylerEich](http://www.github.com/TylerEich)
 
-[MIT License Explained in Plain English](http://www.tldrlegal.com/l/MIT)
+#####Workflows in this Repository:  
+[Colors](#colors)  
+[Wolfram|Alpha](#wolframalpha)  
+
+
+<a name="colors"></a>
+##[Colors](./Source/Colors)
+
+
+<a name="colors"></a>
+##[Wolfram|Alpha](./Source/Wolfram-Alpha)
+
+
+___
+
+*All contents of this repository are available under the [MIT License](../blob/master/LICENSE.md) **  
+ \* *[MIT License Explained in Plain English](http://www.tldrlegal.com/l/MIT)*
