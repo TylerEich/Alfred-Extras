@@ -2,6 +2,7 @@ from os import path
 from types import *
 import alp
 
+# Check for input
 if len(alp.args()) > 0:
 	adds = alp.args()[0].split('\t')
 else:
@@ -11,10 +12,12 @@ else:
 
 # Sync & load favorites
 favs = alp.jsonLoad('favorites.json', default=[])
+
+# Correct existing favorites
 if type(favs) is DictType:
 	favs = favs.items()
 
-# Remove non-existent favorites
+# Hide non-existent favorites
 new_favs = []
 for fav in favs:
 	if path.exists(fav):
@@ -22,7 +25,7 @@ for fav in favs:
 favs = new_favs
 alp.jsonDump(favs, 'favorites.json')
 
-# Remove specified entries
+# Add new entries
 deleted = []
 for add in adds:
 	favs.append(add)
