@@ -1,6 +1,6 @@
 # Alfred Extras
 
-Workflows for [Alfred](http://www.alfredapp.com "Alfred App"), authored by [@TylerEich](http://www.github.com/TylerEich)
+Workflows for [Alfred](http://www.alfredapp.com "Alfred App"), authored by [Tyler Eich](http://www.github.com/TylerEich "@TylerEich")
 
  **[Colors](./Source/Colors)**  
  **[Favorites](./Source/Favorites)**  
