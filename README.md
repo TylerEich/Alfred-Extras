@@ -4,7 +4,7 @@ Workflows for [Alfred](http://www.alfredapp.com "Alfred App"), authored by [Tyle
 
 **[Colors](Source/Colors)**  
 **[Favorites](Source/Favorites)**  
-**[Wolfram|Alpha](Source/Wolfram|Alpha)**
+**[Wolfram|Alpha](Source/Wolfram-Alpha)**
 
 ## MIT License
 *All contents of this repository are available under the [MIT License](./LICENSE.md)*
