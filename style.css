@@ -1,0 +1,236 @@
+/* Styles go here */
+
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (min-width: 64.063em) {
+    /* * {
+        font-size: 100%;
+    } */
+    
+    #header-background {
+        /* height: 8rem !important; */
+    }
+    
+    #header h1 {
+        display: inline-block !important;
+        margin: 0;
+        font-size: 4rem !important;
+        line-height: 6rem !important;
+    }
+    
+    #subheader h2 {
+        margin-top: 1rem;
+    }
+    
+    #logo {
+        display: inline-block !important;
+    }
+    
+    #logo img {
+        height: 6rem !important;
+        margin-top: -2.5rem !important;
+        margin-right: 1rem !important;
+    }
+    
+    } /* large screens and up */
+
+* {
+    font-family: 'Roboto Slab' !important;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: table;
+}
+
+#content-wrap {
+    display: table-row;
+    height: 100%;
+}
+
+#footer-wrap {
+    display: table-row;
+}
+
+button, a {
+    font-weight: bold !important;
+    outline: none;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    transition-property: color, background-color;
+}
+
+a {
+    color: #4bacbc !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #276e7a !important;
+}
+
+#beta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    z-index: 1;
+}
+
+#header-background {
+    width: 100%;
+    background: blueviolet;
+}
+
+#header {
+    /* height: 14em; */
+    padding: 1em 0;
+}
+
+#subheader-background {
+    width: 100%;
+    background: whitesmoke;
+    /* border-bottom: 4px solid black; */
+}
+
+#subheader {
+    padding: 0 0 1em 0;
+    text-align: center;
+}
+
+#subheader h2 {
+    margin-top: 1rem;
+}
+
+/* #header *, #subheader * {
+    font-family: 'Roboto Slab';
+} */
+
+#logo h1 {
+    color: white;
+    display: block;
+    font-size: 2.75rem;
+    line-height: 3.75rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    display: inline-block;
+    clear: both;
+    height: 8rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+    /* margin-top: 1rem; */
+}
+
+button {
+    background: #4bacbc;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+button:hover {
+    background: #276e7a;
+}
+
+.item {
+    padding: 1rem 1rem 0 1rem;
+}
+.item div {
+    /* border: 4px solid #9555c2; */
+    background: whitesmoke;
+    border-radius: 0.25em;
+    margin: 0;
+}
+
+.item img {
+    width: 6em;
+    float: left;
+    padding: 1em;
+}
+
+.item p {
+    padding: 1.75rem 0;
+    margin: 0;
+    font-size: 2em;
+    line-height: 2.5rem;
+    
+}
+
+#subfooter-background {
+    background: whitesmoke;
+    width: 100%;
+}
+
+#subfooter {
+    text-align: center;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#subfooter h2 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* font-weight: bold; */
+}
+
+#footer-background {
+    background: blueviolet;
+    width: 100%;
+}
+
+#footer {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+#footer a, #footer a:hover {
+    background-color: transparent;
+}
+
+#footer h2 {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+#footer h3 {
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: white;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+#footer button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+}

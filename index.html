@@ -1,51 +1,83 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Alfred-extras by TylerEich</title>
+<!DOCTYPE html>
+<html ng-app>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Alfred-extras</h1>
-        <p>Workflows &amp; Themes for Alfred</p>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link data-require="foundation@*" data-semver="5.1.1" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.1.1/css/normalize.css" />
+    <link data-require="foundation@*" data-semver="5.1.1" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.1.1/css/foundation.css" />
+    <link data-require="foundation@*" data-semver="5.1.1" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.1.1/css/foundation.min.css" />
+    <script data-require="foundation@*" data-semver="5.1.1" src="//cdn.jsdelivr.net/foundation/5.1.1/js/foundation/foundation.js"></script>
+    <script data-require="foundation@*" data-semver="5.1.1" src="//cdn.jsdelivr.net/foundation/5.1.1/js/foundation.min.js"></script>
+    <script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src=""></script>
+    <script src="script.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:700,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-        <p class="view"><a href="https://github.com/TylerEich/Alfred-Extras">View the Project on GitHub <small>TylerEich/Alfred-Extras</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/TylerEich/Alfred-Extras/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/TylerEich/Alfred-Extras/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/TylerEich/Alfred-Extras">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a name="alfred-extras" class="anchor" href="#alfred-extras"><span class="octicon octicon-link"></span></a>Alfred Extras</h1>
-
-<p>A collection of workflows &amp; themes for <a href="http://www.alfredapp.com" title="Alfred App">Alfred</a> (v2.0 and above)</p>
-
-<h2>
-<a name="mit-license" class="anchor" href="#mit-license"><span class="octicon octicon-link"></span></a>MIT License</h2>
-
-<p>This repository is available under the MIT License. Check out <a href="https://github.com/TylerEich/Alfred-Extras/blob/master/LICENSE.md">LICENSE.md</a> to see what it says.</p>
-
-<p><a href="http://www.tldrlegal.com/l/MIT">MIT License Explained in Plain English</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/TylerEich">TylerEich</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+<body>
+    <img id="beta" src="http://cl.ly/image/1G3o39391D31/Beta%20Badge.png">
+    <div id="content-wrap">
+        <div id="header-background">
+            <div id="header" class="row">
+                <div id="logo" class="columns">
+                    <img src="http://cl.ly/image/452m1E3W2T2b/Alfred%20Extras.png" />
+                    <h1>Alfred&nbsp;Extras</h1>
+                </div>
+            </div>
+        </div>
+        <div id="subheader-background">
+            <div id="subheader" class="row">
+                <div class="large-4 columns">
+                    <h2>Workflows for             <a target="_blank" href="//www.alfredapp.com">Alfred 2</a>
+          </h2>
+                </div>
+                <div class="large-4 large-push-4 columns">
+                    <h2>Made by             <a target="_blank" href="//github.com/TylerEich">Tyler Eich</a>
+          </h2>
+                </div>
+                <div class="large-4 large-pull-4 columns">
+                    <a target="_blank" href="https://github.com/TylerEich/Alfred-Extras">
+                        <button>View on Github</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="list" class="row" ng-controller="ListController">
+            <div ng-repeat="path in paths" class="item columns medium-6">
+                <div class="border">
+                    <img ng-src="{{ baseUrl }}{{ path }}/icon.png">
+                    <p>{{ path }}</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+    <div id="footer-wrap">
+        <div id="subfooter-background">
+            <div id="subfooter" class="row">
+                <div class="columns">
+                    <h2>Workflows require a <a href="http://www.alfredapp.com/powerpack/">Powerpack&nbsp;License</a></h2>
+                </div>
+            </div>
+        </div>
+        <div id="footer-background">
+            <div id="footer" class="row">
+                <h2>Do you like my work?</h2>
+                <h3>Please consider donating:</h3>
+                <h3>
+                <a href="">
+                    <button>Paypal (not yet)</button>
+                </a>
+                &#x2661;
+                <a target="_blank" href="https://www.gittip.com/TylerEich/">
+                    <button>Gittip</button>
+                </a>
+            </h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
