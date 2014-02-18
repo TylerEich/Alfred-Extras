@@ -45,7 +45,7 @@
             </div>
         </div>
         <div id="list" class="row" ng-controller="ListController">
-            <div ng-repeat="item in items" class="item columns medium-6">
+            <div ng-repeat="item in items" class="item columns medium-6" ng-class="{'end': $last}">
                 <div class="border">
                     <img ng-src="{{ baseUrl }}{{ item.path }}/icon.png">
                     <a target="_blank" ng-href="http://www.packal.org/workflow/{{ item.packalUrl }}"><p>{{ item.name }}</p></a>
