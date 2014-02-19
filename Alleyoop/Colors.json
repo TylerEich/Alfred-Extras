@@ -1,0 +1,5 @@
+{
+	"version": 2.0,
+	"download_url": "https://github.com/packal/repository/raw/master/tylereich.colors/colors_v2.0.0.alfredworkflow",
+	"description": "Major update. Support for NSColor and UIColor; speed improvements"
+}
