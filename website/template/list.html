@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="website/css/list.css" />
+<div id="list" class="row">
+    <div ng-repeat="(key, value) in items track by $index" class="item columns medium-6" ng-class="{'end': $last}">
+    <a ng-href="#/{{ key }}">
+        <div class="border">
+            <img ng-src="Source/{{ key }}/icon.png">
+            <h2>{{ key }}</h2>
+            <p>{{ summary(value) }}</p>
+        </div>
+        </a>
+    </div>
+</div>

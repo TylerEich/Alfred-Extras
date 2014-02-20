@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="alfred-extras">
 
 <head>
     <title>Alfred Extras &#x00B7; Workflows by Tyler Eich</title>
@@ -10,20 +10,21 @@
     <link data-require="foundation@*" data-semver="5.1.1" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.1.1/css/foundation.min.css" />
     <script data-require="foundation@*" data-semver="5.1.1" src="//cdn.jsdelivr.net/foundation/5.1.1/js/foundation/foundation.js"></script>
     <script data-require="foundation@*" data-semver="5.1.1" src="//cdn.jsdelivr.net/foundation/5.1.1/js/foundation.min.js"></script>
-    <script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
-    <script src=""></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+    <script src="website/js/angular-ui-router.min.js"></script>
     <script src="script.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:700,400" rel="stylesheet" type="text/css" />
+    <!-- <link href="//fonts.googleapis.com/css?family=Roboto+Slab:700,400" rel="stylesheet" type="text/css" > -->
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css' >
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <img id="beta" src="website/icons/beta.png">
+    <img id="beta" src="http://cl.ly/image/1G3o39391D31/Beta%20Badge.png">
     <div id="content-wrap">
         <div id="header-background">
             <div id="header" class="row">
                 <div id="logo" class="columns">
-                    <img src="website/icons/logo.png" />
+                    <img src="website/img/logo.png" />
                     <h1>Alfred&nbsp;Extras</h1>
                 </div>
             </div>
@@ -45,13 +46,8 @@
                 </div>
             </div>
         </div>
-        <div id="list" class="row" ng-controller="ListController">
-            <div ng-repeat="item in items" class="item columns medium-6" ng-class="{'end': $last}">
-                <div class="border">
-                    <img ng-src="{{ baseUrl }}{{ item.path }}/icon.png">
-                    <a target="_blank" ng-href="http://www.packal.org/workflow/{{ item.packalUrl }}"><p>{{ item.name }}</p></a>
-                </div>
-            </div>
+        <div ng-controller="ItemController">
+            <div ui-view></div>
         </div>
     </div>
     <div id="footer-wrap">

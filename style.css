@@ -23,7 +23,7 @@
     } /* large screens and up */
 
 * {
-    font-family: 'Roboto Slab' !important;
+    font-family: 'Source Sans Pro' !important;
 }
 
 html, body {
@@ -55,12 +55,12 @@ button, a {
 }
 
 a {
-    color: #4bacbc !important;
+    color: #4bacbc;
     text-decoration: none;
 }
 
 a:hover {
-    color: #276e7a !important;
+    color: #276e7a;
 }
 
 #beta {
@@ -133,29 +133,6 @@ button {
 
 button:hover {
     background: #276e7a;
-}
-
-.item {
-    padding: 1rem 1rem 0 1rem;
-}
-.item div {
-    background: whitesmoke;
-    border-radius: 0.25em;
-    margin: 0;
-}
-
-.item img {
-    width: 6em;
-    float: left;
-    padding: 1em;
-}
-
-.item p {
-    padding: 1.75rem 0;
-    margin: 0;
-    font-size: 2em;
-    line-height: 2.5rem;
-    
 }
 
 #subfooter-background {

@@ -1,0 +1,38 @@
+.item {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.item a {
+    background: whitesmoke;
+}
+.item a:hover {
+    background: gainsboro;
+}
+
+.item div {
+    padding: 0;
+    border-radius: 0.25rem;
+    background: inherit;
+}
+
+.item img {
+    padding: 1rem;
+    width: 5em;
+    float: left;
+}
+
+.item h2 {
+    padding: 1rem 1rem 0 5rem;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #5c1f87;
+    /* color: black; */
+    color: blueviolet;
+}
+.item p {
+    padding: 1rem 0 1rem 5rem;
+    color: grey;
+    margin: 0;
+}
