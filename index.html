@@ -14,12 +14,14 @@
     <script src="website/js/angular-ui-router.min.js"></script>
     <script src="script.js"></script>
     <!-- <link href="//fonts.googleapis.com/css?family=Roboto+Slab:700,400" rel="stylesheet" type="text/css" > -->
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css' >
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css' />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="website/css/brandfont.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-    <img id="beta" src="http://cl.ly/image/1G3o39391D31/Beta%20Badge.png">
+<body ng-controller="ItemController">
+    <img id="beta" src="website/img/beta.png">
     <div id="content-wrap">
         <div id="header-background">
             <div id="header" class="row">
@@ -31,24 +33,13 @@
         </div>
         <div id="subheader-background">
             <div id="subheader" class="row">
-                <div class="large-4 columns">
-                    <h2>Workflows for             <a target="_blank" href="//www.alfredapp.com">Alfred 2</a>
-          </h2>
-                </div>
-                <div class="large-4 large-push-4 columns">
-                    <h2>Authored by             <a target="_blank" href="//github.com/TylerEich">Tyler Eich</a>
-          </h2>
-                </div>
-                <div class="large-4 large-pull-4 columns">
-                    <a target="_blank" href="https://github.com/TylerEich/Alfred-Extras">
-                        <button>View on Github</button>
-                    </a>
-                </div>
+                <div ui-view="subheader" autoscroll="false"></div>
             </div>
+            <!-- <div id="subheader" class="row">
+                
+            </div> -->
         </div>
-        <div ng-controller="ItemController">
-            <div ui-view></div>
-        </div>
+        <div ui-view="body" autoscroll="false"></div>
     </div>
     <div id="footer-wrap">
         <div id="subfooter-background">
@@ -63,12 +54,12 @@
                 <h2>Do you like my work?</h2>
                 <h3>Please consider donating:</h3>
                 <h3>
-                <a href="">
-                    <button>Paypal (not yet)</button>
+                <a target="_blank" href="http://www.packal.org/users/tyler-eich">
+                    <button><i class="bf bf-paypal"></i>PayPal</button>
                 </a>
-                &#x2661;
+                <!--  -->
                 <a target="_blank" href="https://www.gittip.com/TylerEich/">
-                    <button>Gittip</button>
+                    <button><i class="fa fa-gittip"></i>Gittip</button>
                 </a>
             </h3>
             </div>

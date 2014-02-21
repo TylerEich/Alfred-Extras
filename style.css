@@ -26,6 +26,10 @@
     font-family: 'Source Sans Pro' !important;
 }
 
+.fa {
+    font-family: FontAwesome !important;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -135,6 +139,10 @@ button:hover {
     background: #276e7a;
 }
 
+button .fa, button .bf {
+    margin-right: 0.5rem;
+}
+
 #subfooter-background {
     background: whitesmoke;
     width: 100%;
@@ -184,5 +192,5 @@ button:hover {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: 0.25rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
 }

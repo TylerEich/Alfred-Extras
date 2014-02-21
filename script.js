@@ -3,13 +3,29 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     $stateProvider
     .state('root', {
         url: '',
-        templateUrl: 'website/template/list.html',
-        controller: ['$scope', ListController]
+        views: {
+            'subheader': {
+                templateUrl: 'website/template/list.subheader.html',
+                controller: ['$scope', ListController]
+            },
+            'body': {
+                templateUrl: 'website/template/list.body.html',
+                controller: ['$scope', ListController]
+            }
+        }
     })
     .state('detail', {
         url: '/:choice',
-        templateUrl: 'website/template/detail.html',
-        controller: ['$scope', '$stateParams', '$sce', DetailController]
+        views: {
+            'subheader': {
+                templateUrl: 'website/template/detail.subheader.html',
+                controller: ['$scope', '$stateParams', '$sce', DetailController]
+            },
+            'body': {
+                templateUrl: 'website/template/detail.body.html',
+                controller: ['$scope', '$stateParams', '$sce', DetailController]
+            }
+        }
     });
 }]);
 
@@ -50,13 +66,19 @@ function ListController($scope) {
 }
 
 function DetailController($scope, $stateParams, $sce) {
+    // console.log('DetailController');
     $scope.choice = $stateParams.choice;
     
     $scope.readme = function() {
         var readme = $scope.items[$scope.choice];
-                
+        
         if (!readme) return;
-        console.log(marked(readme));
+        
+        var start = readme.indexOf('\n# ') + 3;
+        var end = readme.indexOf('\n', start);
+        
+        readme = readme.substring(end);
+        
         return $sce.trustAsHtml(marked(readme));
     };
 }
