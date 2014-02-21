@@ -51,7 +51,7 @@ body {
 }
 
 button, a, .fa {
-    font-weight: bold !important;
+    font-weight: 600 !important;
     outline: none;
     transition-duration: 0.25s;
     transition-timing-function: ease;
