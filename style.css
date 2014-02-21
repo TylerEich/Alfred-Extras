@@ -50,7 +50,7 @@ body {
     display: table-row;
 }
 
-button, a {
+button, a, .fa {
     font-weight: bold !important;
     outline: none;
     transition-duration: 0.25s;
@@ -63,12 +63,13 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, a:active {
     color: #276e7a;
 }
 
 #beta {
     position: fixed;
+    pointer-events: none;
     top: 0;
     left: 0;
     width: 6rem;
@@ -135,7 +136,7 @@ button {
     border-radius: 0.25rem;
 }
 
-button:hover {
+button:hover, button:active {
     background: #276e7a;
 }
 

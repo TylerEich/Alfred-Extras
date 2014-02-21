@@ -1,3 +1,20 @@
+/* Header styling */
+#header {
+    padding: 0.5rem;
+}
+
+#header img {
+    height: 4rem;
+    margin-top: -1rem;
+    margin-right: 0.25rem;
+}
+#header h1 {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+/* Subheader styling */
 #subheader h1 {
     margin: 0;
     margin-top: 1rem;
