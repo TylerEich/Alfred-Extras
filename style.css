@@ -35,6 +35,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    color: #606060;
 }
 
 body {
@@ -51,20 +52,24 @@ body {
 }
 
 button, a, .fa {
-    font-weight: 600 !important;
+    font-weight: 600;
     outline: none;
     transition-duration: 0.25s;
     transition-timing-function: ease;
     transition-property: color, background-color;
 }
 
+button {
+    font-weight: 600 !important;
+}
+
 a {
-    color: #4bacbc;
+    color: #40B0C0;
     text-decoration: none;
 }
 
 a:hover, a:active {
-    color: #276e7a;
+    color: #206070;
 }
 
 #beta {
@@ -77,18 +82,18 @@ a:hover, a:active {
     z-index: 1;
 }
 
-#header-background {
+#header-background, #footer-background {
     width: 100%;
-    background: blueviolet;
+    background: #8030C0;
 }
 
 #header {
     padding: 1em 0;
 }
 
-#subheader-background {
+#subheader-background, #subfooter-background {
     width: 100%;
-    background: whitesmoke;
+    background: #F0F0F0;
 }
 
 #subheader {
@@ -124,10 +129,11 @@ h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 0;
+    color: #404040;
 }
 
 button {
-    background: #4bacbc;
+    background: #40B0C0;
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 0;
@@ -137,16 +143,11 @@ button {
 }
 
 button:hover, button:active {
-    background: #276e7a;
+    background: #206070;
 }
 
 button .fa, button .bf {
     margin-right: 0.5rem;
-}
-
-#subfooter-background {
-    background: whitesmoke;
-    width: 100%;
 }
 
 #subfooter {
@@ -161,11 +162,6 @@ button .fa, button .bf {
     line-height: 1.5rem;
 }
 
-#footer-background {
-    background: blueviolet;
-    width: 100%;
-}
-
 #footer {
     padding-bottom: 1rem;
     text-align: center;
@@ -177,7 +173,7 @@ button .fa, button .bf {
     font-size: 1.5rem;
     line-height: 2rem;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 #footer h3 {
@@ -192,6 +188,10 @@ button .fa, button .bf {
 #footer button {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin: 0.25rem;
+    margin: 0.25rem 0.25rem 0 0.25rem;
     padding: 0.5rem 0.75rem;
+}
+
+#like {
+    margin: 0 0.125rem;
 }

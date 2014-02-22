@@ -17,20 +17,25 @@
 /* Subheader styling */
 #subheader h1 {
     margin: 0;
-    margin-top: 1rem;
+/*    margin-top: 1rem;*/
     font-size: 3rem;
     line-height: 3.5rem;
-    display: inline-block;
-    color: black;
+    color: #404040;
     font-weight: 600;
 }
 
 #subheader img {
+    text-align: center;
     margin: 0;
-    margin-top: -1.5rem;
-    margin-right: 1rem;
+    margin-top: 1rem;
+/*    margin-top: -1.5rem;*/
+/*    margin-right: 1rem;*/
+    background: #E0E0E0;
+/*    border: 1px solid #D0D0D0;*/
+    border-radius: 0.25rem;
+    padding: 0.5rem;
     display: inline-block;
-    height: 3rem;
+    height: 6rem;
 }
 
 #subheader .border {

@@ -1,3 +1,4 @@
+"use strict";
 var app = angular.module('alfred-extras', ['ui.router']);
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -32,12 +33,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 function ItemController($scope, $http) {
     $scope.items = {};
     
-    function name(response) {
+    $scope.name = function(response) {
         var start = response.indexOf('\n# ') + 3;
         var end = response.indexOf('\n', start);
         
         return response.substring(start, end);
-    }
+    };
     
     $http.get('https://api.github.com/repos/TylerEich/Alfred-Extras/' + 'contents/Source?access_token=001a02138839885be592af28b8b0f615357c2cef&ref=gh-pages')
     .success(function(data) {
@@ -45,11 +46,7 @@ function ItemController($scope, $http) {
             (function(i, data) {
                 $http.get('Source/' + data[i].name + '/README.md')
                 .success(function(response) {
-                    $scope.items[name(response)] = response;
-                    // $scope.items.push({
-                    //     name: name(response),
-                    //     readme: response
-                    // });
+                    $scope.items[data[i].name] = response;
                 });
             })(i, data);
         }
@@ -66,7 +63,6 @@ function ListController($scope) {
 }
 
 function DetailController($scope, $stateParams, $sce) {
-    // console.log('DetailController');
     $scope.choice = $stateParams.choice;
     
     $scope.readme = function() {
@@ -74,10 +70,10 @@ function DetailController($scope, $stateParams, $sce) {
         
         if (!readme) return;
         
-        var start = readme.indexOf('\n# ') + 3;
-        var end = readme.indexOf('\n', start);
-        
-        readme = readme.substring(end);
+        // var start = readme.indexOf('\n# ') + 3;
+//         var end = readme.indexOf('\n', start);
+//         
+//         readme = readme.substring(end);
         
         return $sce.trustAsHtml(marked(readme));
     };
