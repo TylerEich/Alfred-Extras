@@ -35,12 +35,12 @@ function ItemController($scope, $http) {
     
     $scope.name = function(response) {
         var start = response.indexOf('\n# ') + 3;
-        var end = response.indexOf('\n', start);
+        var end = response.indexOf('#\n', start);
         
         return response.substring(start, end);
     };
     
-    $http.get('https://api.github.com/repos/TylerEich/Alfred-Extras/' + 'contents/Source?access_token=001a02138839885be592af28b8b0f615357c2cef&ref=gh-pages')
+    $http.get('https://api.github.com/repos/TylerEich/Alfred-Extras/' + 'contents/Source?access_token=001a02138839885be592af28b8b0f615357c2cef' + '&ref=gh-pages')
     .success(function(data) {
         for (var i = 0; i < data.length; i++) {            
             (function(i, data) {
@@ -56,7 +56,7 @@ function ItemController($scope, $http) {
 function ListController($scope) {
     $scope.summary = function(readme) {
         var start = readme.indexOf('\n#### ') + 6;
-        var end = readme.indexOf('\n', start);
+        var end = readme.indexOf('####\n', start);
         
         return readme.substring(start, end);
     };

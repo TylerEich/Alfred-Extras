@@ -1,6 +1,6 @@
-# Archives
+# Archives #
 
-#### Compress files or folders in multiple formats
+#### Compress files or folders in multiple formats ####
 
 Archives Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
