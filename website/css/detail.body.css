@@ -17,16 +17,23 @@
     font-weight: 600;
 }
 
-#readme h1 {
+#readme h1, #readme h2 {
     padding-top: 1rem;
+    border-bottom: 1px solid #808080;
+}
+#readme h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+}
+#readme h2 {
     font-size: 2rem;
     line-height: 2.5rem;
-    border-bottom: 1px solid #808080;
 }
 #readme h4 {
     padding-top: 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
 }
 
 #readme p {
@@ -35,6 +42,59 @@
     margin: 0;
     padding: 0;
     padding-top: 0.5rem;
+}
+
+#readme small {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+#readme ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5rem;
+}
+#readme li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+#readme hr {
+    
+}
+
+#readme table {
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #D0D0D0;
+    border-collapse: separate;
+    overflow: hidden;
+}
+#readme thead {
+    background: #E0E0E0;
+}
+#readme thead * {
+    font-weight: 600;
+}
+#readme tbody tr:nth-child(odd) {
+    background: #FFF;
+}
+#readme tbody tr:nth-child(even) {
+    background: #F0F0F0;
+}
+#readme th, #readme td {
+    padding: 0.5rem;
+}
+
+#readme img {
+    margin: 0;
+    margin-top: 0.5rem;
+    background: #E0E0E0;
+    border: 1px solid #D0D0D0;
+    border-radius: 0.25rem;
 }
 
 #readme b,
@@ -49,9 +109,10 @@
 #readme pre, #readme code {
     font-family: 'Source Code Pro' !important;
     font-size: 0.75rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: #000;
-    background: #E0E0E0;
+    word-break: break-word;
+    background: #F0F0F0;
     border: 1px solid #D0D0D0;
     border-radius: 0.25rem;
 }
@@ -64,6 +125,6 @@
     border: none;
 }
 #readme code {
-    padding: 0.25rem 0.5rem;
+    padding: 0.125rem 0.25rem;
 }
 

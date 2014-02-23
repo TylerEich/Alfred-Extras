@@ -1,6 +1,27 @@
 /* Header styling */
+
+@media only screen and (min-width: 64.063em) {
+    #header h1 {
+        display: inline-block !important;
+        margin: 0;
+        font-size: 2rem !important;
+        line-height: 3rem !important;
+    }
+    
+    #logo {
+        display: inline-block !important;
+    }
+    
+    #logo img {
+        height: 3em !important;
+        margin-top: -1rem !important;
+        margin-right: 0.5rem !important;
+    }
+    
+} /* large screens and up */
+
 #header {
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 #header img {
@@ -25,7 +46,7 @@
 }
 
 #subheader img {
-    text-align: center;
+/*    text-align: center;*/
     margin: 0;
     margin-top: 1rem;
 /*    margin-top: -1.5rem;*/
@@ -35,7 +56,8 @@
     border-radius: 0.25rem;
     padding: 0.5rem;
     display: inline-block;
-    height: 6rem;
+    height: 64px;
+    box-sizing: content-box;
 }
 
 #subheader .border {
