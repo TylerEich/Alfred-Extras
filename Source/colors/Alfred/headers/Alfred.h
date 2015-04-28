@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Alfred/AWFeedbackItem.h>
-#import <Alfred/AWWorkflow.h>
+#import "AWFeedbackItem.h"
+#import "AWWorkflow.h"
 
 @interface Alfred : NSObject
 

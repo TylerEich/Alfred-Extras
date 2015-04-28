@@ -10,8 +10,15 @@
 		2F1734F91800356E002DD3EB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1734F81800356E002DD3EB /* CoreFoundation.framework */; };
 		2F173505180037D9002DD3EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F173504180037D9002DD3EB /* main.m */; };
 		2F17350818003DD5002DD3EB /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F17350718003DD5002DD3EB /* colors.m */; };
+		2F74BB2F1A14319E00212A4D /* Alfred.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB271A14319E00212A4D /* Alfred.m */; };
+		2F74BB301A14319E00212A4D /* AWArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB281A14319E00212A4D /* AWArgs.m */; };
+		2F74BB311A14319E00212A4D /* AWFeedbackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB291A14319E00212A4D /* AWFeedbackItem.m */; };
+		2F74BB321A14319E00212A4D /* AWPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB2A1A14319E00212A4D /* AWPreferences.m */; };
+		2F74BB331A14319E00212A4D /* AWWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB2B1A14319E00212A4D /* AWWorkflow.m */; };
+		2F74BB341A14319E00212A4D /* NSArray+FuzzySearching.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB2C1A14319E00212A4D /* NSArray+FuzzySearching.m */; };
+		2F74BB351A14319E00212A4D /* NSFileManager+AWFindOrCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB2D1A14319E00212A4D /* NSFileManager+AWFindOrCreate.m */; };
+		2F74BB361A14319E00212A4D /* NSString+XMLEscaping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F74BB2E1A14319E00212A4D /* NSString+XMLEscaping.m */; };
 		2F7DDDA81804C5B900DA5AD4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7DDDA71804C5B900DA5AD4 /* AppKit.framework */; };
-		2F8FE80F1860FB3D00338249 /* Alfred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8FE80E1860FB3D00338249 /* Alfred.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +39,26 @@
 		2F173504180037D9002DD3EB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F17350618003DD5002DD3EB /* colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colors.h; sourceTree = "<group>"; };
 		2F17350718003DD5002DD3EB /* colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colors.m; sourceTree = "<group>"; usesTabs = 0; };
+		2F74BB191A14319E00212A4D /* Alfred-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Alfred-Info.plist"; sourceTree = "<group>"; };
+		2F74BB1A1A14319E00212A4D /* Alfred-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Alfred-Prefix.pch"; sourceTree = "<group>"; };
+		2F74BB1C1A14319E00212A4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2F74BB1E1A14319E00212A4D /* Alfred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alfred.h; sourceTree = "<group>"; };
+		2F74BB1F1A14319E00212A4D /* AWArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWArgs.h; sourceTree = "<group>"; };
+		2F74BB201A14319E00212A4D /* AWFeedbackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWFeedbackItem.h; sourceTree = "<group>"; };
+		2F74BB211A14319E00212A4D /* AWPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWPreferences.h; sourceTree = "<group>"; };
+		2F74BB221A14319E00212A4D /* AWWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWWorkflow.h; sourceTree = "<group>"; };
+		2F74BB231A14319E00212A4D /* NSArray+FuzzySearching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FuzzySearching.h"; sourceTree = "<group>"; };
+		2F74BB241A14319E00212A4D /* NSFileManager+AWFindOrCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AWFindOrCreate.h"; sourceTree = "<group>"; };
+		2F74BB251A14319E00212A4D /* NSString+XMLEscaping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEscaping.h"; sourceTree = "<group>"; };
+		2F74BB271A14319E00212A4D /* Alfred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alfred.m; sourceTree = "<group>"; };
+		2F74BB281A14319E00212A4D /* AWArgs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWArgs.m; sourceTree = "<group>"; };
+		2F74BB291A14319E00212A4D /* AWFeedbackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWFeedbackItem.m; sourceTree = "<group>"; };
+		2F74BB2A1A14319E00212A4D /* AWPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWPreferences.m; sourceTree = "<group>"; };
+		2F74BB2B1A14319E00212A4D /* AWWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWWorkflow.m; sourceTree = "<group>"; };
+		2F74BB2C1A14319E00212A4D /* NSArray+FuzzySearching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FuzzySearching.m"; sourceTree = "<group>"; };
+		2F74BB2D1A14319E00212A4D /* NSFileManager+AWFindOrCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AWFindOrCreate.m"; sourceTree = "<group>"; };
+		2F74BB2E1A14319E00212A4D /* NSString+XMLEscaping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEscaping.m"; sourceTree = "<group>"; };
 		2F7DDDA71804C5B900DA5AD4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		2F8FE80E1860FB3D00338249 /* Alfred.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alfred.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F8FE80F1860FB3D00338249 /* Alfred.framework in Frameworks */,
 				2F7DDDA81804C5B900DA5AD4 /* AppKit.framework in Frameworks */,
 				2F1734F91800356E002DD3EB /* CoreFoundation.framework in Frameworks */,
 			);
@@ -53,8 +77,8 @@
 		2F1734EC1800356D002DD3EB = {
 			isa = PBXGroup;
 			children = (
-				2F8FE80E1860FB3D00338249 /* Alfred.framework */,
 				2F1734FA1800356E002DD3EB /* colors */,
+				2F74BB181A14319E00212A4D /* Alfred */,
 				2F1734F71800356E002DD3EB /* Frameworks */,
 				2F1734F61800356E002DD3EB /* Products */,
 			);
@@ -85,6 +109,48 @@
 				2F173504180037D9002DD3EB /* main.m */,
 			);
 			path = colors;
+			sourceTree = "<group>";
+		};
+		2F74BB181A14319E00212A4D /* Alfred */ = {
+			isa = PBXGroup;
+			children = (
+				2F74BB191A14319E00212A4D /* Alfred-Info.plist */,
+				2F74BB1A1A14319E00212A4D /* Alfred-Prefix.pch */,
+				2F74BB1B1A14319E00212A4D /* InfoPlist.strings */,
+				2F74BB1D1A14319E00212A4D /* headers */,
+				2F74BB261A14319E00212A4D /* implementation */,
+			);
+			path = Alfred;
+			sourceTree = "<group>";
+		};
+		2F74BB1D1A14319E00212A4D /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				2F74BB1E1A14319E00212A4D /* Alfred.h */,
+				2F74BB1F1A14319E00212A4D /* AWArgs.h */,
+				2F74BB201A14319E00212A4D /* AWFeedbackItem.h */,
+				2F74BB211A14319E00212A4D /* AWPreferences.h */,
+				2F74BB221A14319E00212A4D /* AWWorkflow.h */,
+				2F74BB231A14319E00212A4D /* NSArray+FuzzySearching.h */,
+				2F74BB241A14319E00212A4D /* NSFileManager+AWFindOrCreate.h */,
+				2F74BB251A14319E00212A4D /* NSString+XMLEscaping.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		2F74BB261A14319E00212A4D /* implementation */ = {
+			isa = PBXGroup;
+			children = (
+				2F74BB271A14319E00212A4D /* Alfred.m */,
+				2F74BB281A14319E00212A4D /* AWArgs.m */,
+				2F74BB291A14319E00212A4D /* AWFeedbackItem.m */,
+				2F74BB2A1A14319E00212A4D /* AWPreferences.m */,
+				2F74BB2B1A14319E00212A4D /* AWWorkflow.m */,
+				2F74BB2C1A14319E00212A4D /* NSArray+FuzzySearching.m */,
+				2F74BB2D1A14319E00212A4D /* NSFileManager+AWFindOrCreate.m */,
+				2F74BB2E1A14319E00212A4D /* NSString+XMLEscaping.m */,
+			);
+			path = implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,12 +204,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F74BB321A14319E00212A4D /* AWPreferences.m in Sources */,
+				2F74BB301A14319E00212A4D /* AWArgs.m in Sources */,
+				2F74BB341A14319E00212A4D /* NSArray+FuzzySearching.m in Sources */,
+				2F74BB2F1A14319E00212A4D /* Alfred.m in Sources */,
 				2F173505180037D9002DD3EB /* main.m in Sources */,
+				2F74BB361A14319E00212A4D /* NSString+XMLEscaping.m in Sources */,
+				2F74BB311A14319E00212A4D /* AWFeedbackItem.m in Sources */,
 				2F17350818003DD5002DD3EB /* colors.m in Sources */,
+				2F74BB351A14319E00212A4D /* NSFileManager+AWFindOrCreate.m in Sources */,
+				2F74BB331A14319E00212A4D /* AWWorkflow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2F74BB1B1A14319E00212A4D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F74BB1C1A14319E00212A4D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2F1734FF1800356E002DD3EB /* Debug */ = {

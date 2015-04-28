@@ -22,6 +22,13 @@
 
 @property NSString      *title;
 @property NSString      *subtitle;
+// additional properties to support modifier subtitles
+@property NSString		*subShift;
+@property NSString		*subFn;
+@property NSString		*subCtrl;
+@property NSString		*subAlt;
+@property NSString		*subCmd;
+
 @property NSString      *uid;
 @property NSNumber      *valid;
 @property NSString      *autocomplete;

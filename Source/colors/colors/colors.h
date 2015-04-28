@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
-#import <Alfred/Alfred.h>
+#import "../Alfred/headers/Alfred.h"
 #import <math.h>
 
 @interface Colors : NSObject
@@ -28,7 +28,7 @@
 - (void) setColor: (NSColor*)color;
 - (bool) toggleAlpha;
 - (void) setToggleAlpha: (bool)value;
-- (NSString*) formattedInput: (bool)alfredSafe;
+- (NSString*) formattedInput;
 - (void) savePreviewToPath: (NSString*)path;
 - (void) sendToAlfred;
 @end

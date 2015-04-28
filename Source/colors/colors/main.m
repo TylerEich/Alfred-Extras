@@ -97,7 +97,7 @@ int main(int argc, const char *argv[])
      {
         [colors setToggleAlpha:YES];
         [colors input:query];
-        NSString *output = [colors formattedInput:NO];
+        NSString *output = [colors formattedInput];
         printf("%s", [output UTF8String]);
      }
 }
