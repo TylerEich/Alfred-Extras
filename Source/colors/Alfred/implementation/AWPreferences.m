@@ -18,9 +18,5 @@
 
 @implementation AWPreferences
 
-- (void)setPreference:(id)v forKey:(NSString *)k
-{
-    
-}
 
 @end

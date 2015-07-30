@@ -10,8 +10,8 @@
 
 @interface AWPreferences : NSObject
 
-- (void)setPreference:(id)v forKey:(NSString *)k;
-- (id)preferenceForKey:(NSString *)k;
+//- (void)setPreference:(id)v forKey:(NSString *)k;
+//- (id)preferenceForKey:(NSString *)k;
 
 @property (readonly) NSCache *c;
 

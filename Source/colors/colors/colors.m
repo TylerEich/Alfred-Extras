@@ -274,13 +274,13 @@
          // Objective-C NS Colors white
          objCNs = [objCNs arrayByAddingObjectsFromArray:@[@{
                                                       @"id":@"objc-ns-calibrated-white",
-                                                      @"description":@"ObjC • NSColor • Calibrated White",
+                                                      @"description":@"Objective-C • NSColor • Calibrated White",
                                                       @"argument":[NSString stringWithFormat:@"[NSColor colorWithCalibratedWhite:%.3g alpha:%.3g]", v, ignoreAlpha ? 1.0 : a],
                                                       @"autocomplete":[NSString stringWithFormat:@"Color colorWithCalibratedWhite:%.3g alpha:%.3g]", v, ignoreAlpha ? 1.0 : a]
                                                       },
                                                   @{
                                                       @"id":@"obj-ns-device-white",
-                                                      @"description":@"ObjC • NSColor • Device White",
+                                                      @"description":@"Objective-C • NSColor • Device White",
                                                       @"argument":[NSString stringWithFormat:@"[NSColor colorWithDeviceWhite:%.3g alpha:%.3g]", v, ignoreAlpha ? 1.0 : a],
                                                       @"autocomplete":[NSString stringWithFormat:@"Color colorWithDeviceWhite:%.3g alpha:%.3g]", v, ignoreAlpha ? 1.0 : a]
                                                       }]];
@@ -288,7 +288,7 @@
          // Objective-c NS Colors white
          objCUi = [objCUi arrayByAddingObjectsFromArray:@[@{
                                                       @"id":@"obj-ui-white",
-                                                      @"description":@"ObjC • UIColor • White",
+                                                      @"description":@"Objective-C • UIColor • White",
                                                       @"argument":[NSString stringWithFormat:@"[UIColor colorWithWhite:%.3g alpha:%.3g]", v, ignoreAlpha ? 1.0 : a],
                                                       @"autocomplete":[NSString stringWithFormat:@"Color colorWithWhite:%.3g alpha:%.3g]", v, ignoreAlpha ? 1.0 : a]
                                                       }]];
@@ -297,22 +297,22 @@
          swiftNs = [swiftNs arrayByAddingObjectsFromArray:@[@{
                                                                 @"id": @"swift-ns-calibrated-white",
                                                                 @"description": @"Swift • NSColor • Calibrated White",
-                                                                @"argument": [NSString stringWithFormat:@"NSColor(calibratedWhite:%.3g alpha: %.3g", v, ignoreAlpha ? 1.0 : a],
-                                                                @"autocomplete": [NSString stringWithFormat:@"NSColor(calibratedWhite:%.3g alpha: %.3g", v, ignoreAlpha ? 1.0 : a]
+                                                                @"argument": [NSString stringWithFormat:@"NSColor(calibratedWhite:%.3g alpha: %.3g)", v, ignoreAlpha ? 1.0 : a],
+                                                                @"autocomplete": [NSString stringWithFormat:@"NSColor(calibratedWhite:%.3g alpha: %.3g)", v, ignoreAlpha ? 1.0 : a]
                                                                 },
                                                             @{
                                                                 @"id": @"swift-ns-device-white",
                                                                 @"description": @"Swift • NSColor • Device White",
-                                                                @"argument": [NSString stringWithFormat:@"NSColor(deviceWhite:%.3g alpha: %.3g", v, ignoreAlpha ? 1.0 : a],
-                                                                @"autocomplete": [NSString stringWithFormat:@"NSColor(deviceWhite:%.3g alpha: %.3g", v, ignoreAlpha ? 1.0 : a]
+                                                                @"argument": [NSString stringWithFormat:@"NSColor(deviceWhite:%.3g alpha: %.3g)", v, ignoreAlpha ? 1.0 : a],
+                                                                @"autocomplete": [NSString stringWithFormat:@"NSColor(deviceWhite:%.3g alpha: %.3g)", v, ignoreAlpha ? 1.0 : a]
                                                                 }]];
          
          // Swift UI Colors
          swiftUi = [swiftUi arrayByAddingObjectsFromArray:@[@{
                                                                 @"id": @"swift-ui-white",
                                                                 @"description": @"Swift • UIColor • White",
-                                                                @"argument": [NSString stringWithFormat:@"UIColor(white: %.3g alpha: %.3g]", v, ignoreAlpha ? 1.0 : a],
-                                                                @"autocomplete": [NSString stringWithFormat:@"UIColor(white: %.3g alpha: %.3g]", v, ignoreAlpha ? 1.0 : a]
+                                                                @"argument": [NSString stringWithFormat:@"UIColor(white: %.3g alpha: %.3g)", v, ignoreAlpha ? 1.0 : a],
+                                                                @"autocomplete": [NSString stringWithFormat:@"UIColor(white: %.3g alpha: %.3g)", v, ignoreAlpha ? 1.0 : a]
                                                                 }]];
          
          
@@ -323,25 +323,25 @@
     // Objective-C NSColors
     objCNs = [objCNs arrayByAddingObjectsFromArray:@[@{
                                                  @"id":@"objc-ns-calibrated-rgb",
-                                                 @"description":@"Objc • NSColor • Calibrated RGB",
+                                                 @"description":@"Objective-C • NSColor • Calibrated RGB",
                                                  @"argument":[NSString stringWithFormat:@"[NSColor colorWithCalibratedRed:%.3g green:%.3g blue:%.3g alpha:%.3g]", r, g, b, ignoreAlpha ? 1.0 : a],
                                                  @"autocomplete":[NSString stringWithFormat:@"Color colorWithCalibratedRed:%.3g green:%.3g blue:%.3g alpha:%.3g]", r, g, b, ignoreAlpha ? 1.0 : a]
                                                  },
                                              @{
                                                  @"id":@"objc-ns-calibrated-hsb",
-                                                 @"description":@"Objc • NSColor • Calibrated HSB",
+                                                 @"description":@"Objective-C • NSColor • Calibrated HSB",
                                                  @"argument":[NSString stringWithFormat:@"[NSColor colorWithCalibratedHue:%.3g saturation:%.3g brightness:%.3g alpha:%.3g]", h, s, v, ignoreAlpha ? 1.0 : a],
                                                  @"autocomplete":[NSString stringWithFormat:@"Color colorWithCalibratedHue:%.3g saturation:%.3g brightness:%.3g alpha:%.3g]", h, s, v, ignoreAlpha ? 1.0 : a]
                                                  },
                                              @{
                                                  @"id":@"objc-ns-device-rgb",
-                                                 @"description":@"Objc • NSColor • Device RGB",
+                                                 @"description":@"Objective-C • NSColor • Device RGB",
                                                  @"argument":[NSString stringWithFormat:@"[NSColor colorWithDeviceRed:%.3g green:%.3g blue:%.3g alpha:%.3g]", r, g, b, ignoreAlpha ? 1.0 : a],
                                                  @"autocomplete":[NSString stringWithFormat:@"Color colorWithDeviceRed:%.3g green:%.3g blue:%.3g alpha:%.3g]", r, g, b, ignoreAlpha ? 1.0 : a]
                                                  },
                                              @{
                                                  @"id":@"objc-ns-device-hsb",
-                                                 @"description":@"Objc • NSColor • Device HSB",
+                                                 @"description":@"Objective-C • NSColor • Device HSB",
                                                  @"argument":[NSString stringWithFormat:@"[NSColor colorWithDeviceHue:%.3g saturation:%.3g brightness:%.3g alpha:%.3g]", h, s, v, ignoreAlpha ? 1.0 : a],
                                                  @"autocomplete":[NSString stringWithFormat:@"Color colorWithDeviceHue:%.3g saturation:%.3g brightness:%.3g alpha:%.3g]", h, s, v, ignoreAlpha ? 1.0 : a]
                                                  }]];
@@ -349,38 +349,38 @@
     swiftNs = [swiftNs arrayByAddingObjectsFromArray:@[@{
                                                            @"id": @"swift-ns-calibrated-rgb",
                                                            @"description": @"Swift • NSColor • Calibrated RGB",
-                                                           @"argument": [NSString stringWithFormat:@"NSColor(calibratedRed: %.3g, green: %.3g, blue: %.3g, alpha: %3.g)", r, g, b, ignoreAlpha ? 1.0 : a],
-                                                           @"autocomplete": [NSString stringWithFormat:@"Color calibratedRed: %.3g, green: %.3g, blue: %.3g, alpha: %3.g)", r, g, b, ignoreAlpha ? 1.0 : a],
+                                                           @"argument": [NSString stringWithFormat:@"NSColor(calibratedRed:%.3g, green:%.3g, blue: %.3g, alpha:%3.g)", r, g, b, ignoreAlpha ? 1.0 : a],
+                                                           @"autocomplete": [NSString stringWithFormat:@"Color(calibratedRed:%.3g, green:%.3g, blue:%.3g, alpha:%3.g)", r, g, b, ignoreAlpha ? 1.0 : a],
                                                            },
                                                        @{
                                                            @"id":@"swift-ns-calibrated-hsb",
                                                            @"description":@"Swift • NSColor • Calibrated HSB",
                                                            @"argument": [NSString stringWithFormat:@"NSColor(calibratedHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a],
-                                                           @"autocomplete":[NSString stringWithFormat:@"Color calibratedHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a]
+                                                           @"autocomplete":[NSString stringWithFormat:@"Color(calibratedHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a]
                                                            },
                                                        @{
                                                            @"id":@"swift-ns-device-rgb",
                                                            @"description":@"Swift • NSColor • Device RGB",
                                                            @"argument":[NSString stringWithFormat:@"NSColor(deviceRed:%.3g, green:%.3g, blue:%.3g, alpha:%.3g)", r, g, b, ignoreAlpha ? 1.0 : a],
-                                                           @"autocomplete":[NSString stringWithFormat:@"Color deviceRed:%.3g, green:%.3g, blue:%.3g, alpha:%.3g)", r, g, b, ignoreAlpha ? 1.0 : a]
+                                                           @"autocomplete":[NSString stringWithFormat:@"Color(deviceRed:%.3g, green:%.3g, blue:%.3g, alpha:%.3g)", r, g, b, ignoreAlpha ? 1.0 : a]
                                                            },
                                                        @{
                                                            @"id":@"swift-ns-device-hsb",
                                                            @"description":@"Swift • NSColor • Device HSB",
                                                            @"argument":[NSString stringWithFormat:@"NSColor(deviceHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a],
-                                                           @"autocomplete":[NSString stringWithFormat:@"Color colorWithDeviceHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a]
+                                                           @"autocomplete":[NSString stringWithFormat:@"Color(deviceHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a]
                                                            }]];
     
     // Objective-C UIColors
     objCUi = [objCUi arrayByAddingObjectsFromArray:@[@{
                                                  @"id":@"objc-ui-rgb",
-                                                 @"description":@"ObjC • UIColor • RGB",
+                                                 @"description":@"Objective-C • UIColor • RGB",
                                                  @"argument":[NSString stringWithFormat:@"[UIColor colorWithRed:%.3g green:%.3g blue:%.3g alpha:%.3g]", r, g, b, ignoreAlpha ? 1.0 : a],
                                                  @"autocomplete":[NSString stringWithFormat:@"Color colorWithRed:%.3g green:%.3g blue:%.3g alpha:%.3g]", r, g, b, ignoreAlpha ? 1.0 : a]
                                                  },
                                              @{
                                                  @"id":@"objc-ui-hsb",
-                                                 @"description":@"ObjC • UIColor • HSB",
+                                                 @"description":@"Objective-C • UIColor • HSB",
                                                  @"argument":[NSString stringWithFormat:@"[UIColor colorWithHue:%.3g saturation:%.3g brightness:%.3g alpha:%.3g]", h, s, v, ignoreAlpha ? 1.0 : a],
                                                  @"autocomplete":[NSString stringWithFormat:@"Color colorWithHue:%.3g saturation:%.3g brightness:%.3g alpha:%.3g]", h, s, v, ignoreAlpha ? 1.0 : a]
                                                  }]];
@@ -390,13 +390,13 @@
                                                          @"id":@"swift-ui-rgb",
                                                          @"description":@"Swift • UIColor • RGB",
                                                          @"argument":[NSString stringWithFormat:@"UIColor(red:%.3g, green:%.3g, blue:%.3g, alpha:%.3g)", r, g, b, ignoreAlpha ? 1.0 : a],
-                                                         @"autocomplete":[NSString stringWithFormat:@"Color red:%.3g green:%.3g blue:%.3g alpha:%.3g)", r, g, b, ignoreAlpha ? 1.0 : a]
+                                                         @"autocomplete":[NSString stringWithFormat:@"Color(red:%.3g green:%.3g blue:%.3g alpha:%.3g)", r, g, b, ignoreAlpha ? 1.0 : a]
                                                          },
                                                      @{
                                                          @"id":@"swift-ui-hsb",
                                                          @"description":@"Swift • UIColor • HSB",
                                                          @"argument":[NSString stringWithFormat:@"UIColor(hue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a],
-                                                         @"autocomplete":[NSString stringWithFormat:@"Color colorWithHue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a]
+                                                         @"autocomplete":[NSString stringWithFormat:@"Color(hue:%.3g, saturation:%.3g, brightness:%.3g, alpha:%.3g)", h, s, v, ignoreAlpha ? 1.0 : a]
                                                          }]];
     
     
@@ -730,20 +730,146 @@
          }
         else // Search named colors
          {
-            if ([format isEqual:@"ns"] || [format isEqual:@"ui"])
-             {
-                // Search Objective-C named colors
-             }
-            if ([format isEqual:@"ns"])
-             {
-                // Search NS named colors
-             }
-            else
-             {
-                return NO;
-             }
+             return NO;
+//            if ([format isEqual:@"ns"] || [format isEqual:@"ui"])
+//             {
+//                // Search Objective-C named colors
+//             }
+//            if ([format isEqual:@"ns"])
+//             {
+//                // Search NS named colors
+//             }
+//            else
+//             {
+//                return NO;
+//             }
          }
      }
+    else if ([query hasPrefix:@"NSColor"] || [query hasPrefix:@"UIColor"]) // Swift NSColor and UIColor
+    {
+        NSString *format;
+        if ([query hasPrefix:@"NSColor"])
+        {
+            format = @"swift-ns";
+        }
+        else if ([query hasPrefix:@"UIColor"])
+        {
+            format = @"swift-ui";
+        }
+        else
+        {
+            return NO;
+        }
+        NSString *model = @"-rgb";
+        query = [query lowercaseString];
+        
+        NSString *componentQuery = query;
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"NSColor" withString:@""];
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"UIColor" withString:@""];
+        componentQuery = [componentQuery stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+//        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"co" withString:@""]; // 'color' == 'c'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"ed" withString:@""]; // 'calibrated' == 'd'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"ic" withString:@""]; // 'device' == 'c'
+//        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"with" withString:@""]; // 'with' == 'w' & 'h'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"gh" withString:@""]; // 'brightness' == 'h'
+        componentQuery = [componentQuery stringByReplacingOccurrencesOfString:@"ph" withString:@""]; // 'alpha' == 'h'
+        
+        componentQuery = [componentQuery stringByPreservingCharactersInString:@"0123456789.whcd \t\n"];
+        
+        if ([query isEqual:@""])
+        {
+            [self setMostRecentKey:format];
+            return YES;
+        }
+        
+        queryArray = [query componentsSeparatedByCharactersInString:@" \t\n"];
+        NSMutableArray *valueArray = [[NSMutableArray alloc] init];
+        
+        if ([queryArray count] > 0)
+        {
+            NSString *firstComponent = [queryArray objectAtIndex:0];
+            NSString *nsModelPrefix = @"-calibrated";
+            
+            if ([format isEqual:@"swift-ns"])
+            {
+                if ([firstComponent rangeOfString:@"d"].location != NSNotFound)
+                {
+                    firstComponent = [firstComponent stringByReplacingOccurrencesOfString:@"d" withString:@""];
+                    nsModelPrefix = @"-device";
+                }
+            }
+            
+            NSString *queryValue;
+            for (queryValue in queryArray)
+            {
+                queryValue = [queryValue stringByPreservingCharactersInString:@"0123456789."];
+                if (![queryValue isEqual:@""]) [valueArray addObject:queryValue];
+            }
+            
+            if ([firstComponent hasPrefix:@"w"]) model = @"-white";
+            else if ([firstComponent hasPrefix:@"h"]) model = @"-hsb";
+            
+            if ([format isEqual:@"swift-ns"]) model = [nsModelPrefix stringByAppendingString:model];
+            
+            firstComponent = [firstComponent stringByPreservingCharactersInString:@"0123456789."];
+            if ([firstComponent isEqual:@""]) [queryArray removeObjectAtIndex:0];
+            else [queryArray replaceObjectAtIndex:0 withObject:firstComponent];
+        }
+        
+        [self setPreferredFormat:model forKey:format];
+        
+        if ([queryArray count] == 0) return YES;
+        
+        if ([model hasSuffix:@"rgb"])
+        {
+            if ([valueArray count] > 0) r = [[valueArray objectAtIndex:0] floatValue];
+            if ([valueArray count] > 1) g = [[valueArray objectAtIndex:1] floatValue];
+            if ([valueArray count] > 2) b = [[valueArray objectAtIndex:2] floatValue];
+            if ([valueArray count] > 3) a = [[valueArray objectAtIndex:3] floatValue];
+            
+            if ([valueArray count] > 0) [self setColor:[NSColor colorWithCalibratedRed:r
+                                                                                 green:g
+                                                                                  blue:b
+                                                                                 alpha:a]];
+        }
+        else if ([model hasSuffix:@"white"])
+        {
+            if ([valueArray count] > 0) w = [[valueArray objectAtIndex:0] floatValue];
+            if ([valueArray count] > 1) a = [[valueArray objectAtIndex:1] floatValue];
+            
+            if ([valueArray count] > 0) [self setColor:[NSColor colorWithCalibratedWhite:w
+                                                                                   alpha:a]];
+        }
+        else if ([model hasSuffix:@"hsb"])
+        {
+            if ([valueArray count] > 0) h = [[valueArray objectAtIndex:0] floatValue];
+            if ([valueArray count] > 1) s = [[valueArray objectAtIndex:1] floatValue];
+            if ([valueArray count] > 2) v = [[valueArray objectAtIndex:2] floatValue];
+            if ([valueArray count] > 3) a = [[valueArray objectAtIndex:3] floatValue];
+            
+            if ([valueArray count] > 0) [self setColor:[NSColor colorWithCalibratedHue:h
+                                                                            saturation:s
+                                                                            brightness:v
+                                                                                 alpha:a]];
+        }
+        else // Search named colors
+        {
+            return NO;
+            //            if ([format isEqual:@"ns"] || [format isEqual:@"ui"])
+            //             {
+            //                // Search Objective-C named colors
+            //             }
+            //            if ([format isEqual:@"ns"])
+            //             {
+            //                // Search NS named colors
+            //             }
+            //            else
+            //             {
+            //                return NO;
+            //             }
+        }
+    }
+
     else // Nothing else matches; check CSS named colors
      {
         query = [query lowercaseString];
