@@ -107,11 +107,8 @@
 - (NSString *)cache
 {
     NSString *c = [[NSFileManager defaultManager] cacheDirectory];
-    NSString *bid = [self bundleID];
     if (c != nil) {
-        c = [[[c stringByAppendingPathComponent:@"com.runningwithcrayons.Alfred-2"] stringByAppendingPathComponent:@"Workfow Data"]
-             stringByAppendingPathComponent:bid];
-
+        c = [[[NSProcessInfo processInfo] environment] objectForKey:@"alfred_workflow_cache"];
     }
     [[NSFileManager defaultManager] createIfNonexistent:c];
     return c;
